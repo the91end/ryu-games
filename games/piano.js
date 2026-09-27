@@ -4,7 +4,14 @@
 //
 // Songs live in games/songs.js (shared with the Play a Song game).
 
-import { NOTES as KEYS, SONGS } from './songs.js';
+import { NOTES, SONGS } from './songs.js';
+
+// 8 keys: C D E F G A B C2. Songs' low/high notes (G0, D2…) use the key with the same name.
+const KEYS = NOTES.filter((n) => /^[A-G]$|^C2$/.test(n.name));
+const keyFor = (name) => {
+  const i = KEYS.findIndex((k) => k.name === name);
+  return i >= 0 ? i : KEYS.findIndex((k) => k.name === name[0]);
+};
 
 const CHEER = { en: 'Yay! Well done!', id: 'Hore! Pintar!' };
 
@@ -37,7 +44,6 @@ export default {
 
     const songBar = stage.querySelector('.songs');
     const keysEl = stage.querySelector('.keys');
-    const indexOf = Object.fromEntries(KEYS.map((k, i) => [k.name, i]));
 
     let song = null; // { notes: number[], pos, button }
 
@@ -92,7 +98,7 @@ export default {
         songBar.querySelectorAll('.song').forEach((b) => b.classList.remove('active'));
         if (song?.button === btn) { song = null; highlightNext(); return; } // tap again = free play
         btn.classList.add('active');
-        song = { notes: s.notes.split(/\s+/).map((n) => indexOf[n]), pos: 0, button: btn };
+        song = { notes: s.notes.split(/\s+/).map(keyFor), pos: 0, button: btn };
         highlightNext();
       });
       songBar.appendChild(btn);

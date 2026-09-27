@@ -61,6 +61,7 @@ button {
   margin: 0;
   font-size: clamp(28px, 7vmin, 56px);
 }
+.icon-btn[hidden] { display: none; }
 .icon-btn {
   font-family: var(--emoji-font);
   width: 72px;

@@ -7,6 +7,15 @@
 
 import { CATEGORIES } from './flashcards-data.js';
 
+const ANNOUNCE_DELAY = 500; // ms after a card appears before its name is spoken
+const NAV_THROTTLE = 700;   // ms minimum between card changes (arrows or swipes)
+
+const CHEERS = [
+  { en: 'Great job!', id: 'Hebat!' },
+  { en: 'Well done!', id: 'Pintar sekali!' },
+  { en: 'Yay! You did it!', id: 'Hore! Bagus!' },
+];
+
 const missingAudio = new Set(); // remember 404s so we fall back to speech instantly
 
 export default {
@@ -120,19 +129,30 @@ export default {
       audio.play().catch(() => { missingAudio.add(key); speak(); });
     }
 
+    // Letter by letter, then the whole word, then a cheer: "C! A! T! Cat! Great job!"
     function spell() {
       cancelPending();
       const spans = [...wordEl.children];
       const letters = spans.filter((s) => /\p{L}|\p{N}/u.test(s.textContent));
+      const STEP = 750;
       letters.forEach((s, i) => later(() => {
         spans.forEach((x) => x.classList.remove('lit'));
         s.classList.add('lit');
-        kit.say(s.textContent.toLowerCase());
-      }, i * 700));
+        kit.sayLetter(s.textContent);
+        kit.sound.note(i); // a rising little tune under the letters
+      }, i * STEP));
+      const end = letters.length * STEP + 150;
+      later(() => {
+        spans.forEach((x) => x.classList.add('lit'));
+        kit.say(current().name);
+        picEl.classList.remove('bounce');
+        void picEl.offsetWidth;
+        picEl.classList.add('bounce');
+      }, end);
       later(() => {
         spans.forEach((x) => x.classList.remove('lit'));
-        kit.say(current().name);
-      }, letters.length * 700 + 200);
+        kit.say(kit.pick(CHEERS));
+      }, end + 1300);
     }
 
     // ---------- rendering ----------
@@ -190,11 +210,17 @@ export default {
         wordEl.appendChild(s);
       }
       btn('sound').hidden = !c.sound;
-      if (announce) sayName();
+      // Give the card a moment to appear before it talks
+      if (announce) later(sayName, ANNOUNCE_DELAY);
     }
 
+    // Throttled: a toddler mashing the arrows moves one card at a time
+    let lastNav = 0;
     function go(step) {
       if (!category) return;
+      const now = performance.now();
+      if (now - lastNav < NAV_THROTTLE) return;
+      lastNav = now;
       const n = category.cards.length;
       index = (index + step + n) % n;
       cardEl.classList.add(step > 0 ? 'out-left' : 'out-right');

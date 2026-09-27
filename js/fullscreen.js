@@ -44,3 +44,22 @@ export async function keepAwake() {
 document.addEventListener('visibilitychange', () => {
   if (wakeLock && document.visibilityState === 'visible') keepAwake();
 });
+
+/**
+ * Keep the app fullscreen: browsers only allow entering fullscreen from a tap,
+ * so if it was left (Android back gesture, notification, app switch…) the very
+ * next tap anywhere goes fullscreen again. The tap still reaches the game.
+ * Installed as an app (manifest "display": "fullscreen") it is always fullscreen.
+ */
+export function keepFullscreen() {
+  const reenter = () => {
+    if (!document.fullscreenElement && !document.webkitFullscreenElement && !isInstalled()) enterFullscreen();
+  };
+  document.addEventListener('pointerdown', reenter, { capture: true });
+}
+
+/** Running as an installed app (home screen / PWA)? */
+export function isInstalled() {
+  return window.matchMedia('(display-mode: fullscreen), (display-mode: standalone)').matches ||
+    window.navigator.standalone === true;
+}

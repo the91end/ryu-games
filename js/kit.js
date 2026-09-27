@@ -3,17 +3,9 @@
 // is cleaned up automatically when the game exits, so games only need a
 // minimal stop() — or none at all.
 
-import { getLang, t, tr, say } from './i18n.js';
-
-let audioCtx = null;
-function getAudio() {
-  if (!audioCtx) {
-    const Ctx = window.AudioContext || window.webkitAudioContext;
-    if (Ctx) audioCtx = new Ctx();
-  }
-  if (audioCtx?.state === 'suspended') audioCtx.resume();
-  return audioCtx;
-}
+import { getLang, t, tr, say, sayLetter } from './i18n.js';
+import { getAudio } from './audio.js';
+import { stopClip } from './voice.js';
 
 // Happy-sounding pentatonic scale: any sequence of these notes sounds nice
 const PENTATONIC = [261.63, 293.66, 329.63, 392.0, 440.0, 523.25, 587.33, 659.25, 783.99, 880.0];
@@ -147,6 +139,8 @@ export function createKit(stage) {
     tr,
     /** Speak a string or { en, id } object in the current language. */
     say,
+    /** Say one letter's name, e.g. "B!" / "Be!" (for spelling). */
+    sayLetter,
 
     vibrate(ms = 30) { navigator.vibrate?.(ms); },
 
@@ -160,6 +154,7 @@ export function createKit(stage) {
         try { cleanups.pop()(); } catch (err) { console.error(err); }
       }
       window.speechSynthesis?.cancel();
+      stopClip();
       stage.innerHTML = '';
       stage.removeAttribute('style');
     },
@@ -168,5 +163,3 @@ export function createKit(stage) {
   return kit;
 }
 
-/** Must be called from a user gesture once (browsers block audio until then). */
-createKit.unlockAudio = getAudio;

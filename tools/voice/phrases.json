@@ -1,0 +1,4022 @@
+[
+ {
+  "lang": "en",
+  "key": "animals",
+  "text": "Animals!"
+ },
+ {
+  "lang": "en",
+  "key": "dog",
+  "text": "Dog!"
+ },
+ {
+  "lang": "en",
+  "key": "woof-woof",
+  "text": "Woof woof!"
+ },
+ {
+  "lang": "en",
+  "key": "cat",
+  "text": "Cat!"
+ },
+ {
+  "lang": "en",
+  "key": "meow",
+  "text": "Meow!"
+ },
+ {
+  "lang": "en",
+  "key": "cow",
+  "text": "Cow!"
+ },
+ {
+  "lang": "en",
+  "key": "moooo",
+  "text": "Moooo!"
+ },
+ {
+  "lang": "en",
+  "key": "chicken",
+  "text": "Chicken!"
+ },
+ {
+  "lang": "en",
+  "key": "cluck-cluck",
+  "text": "Cluck cluck!"
+ },
+ {
+  "lang": "en",
+  "key": "duck",
+  "text": "Duck!"
+ },
+ {
+  "lang": "en",
+  "key": "quack-quack",
+  "text": "Quack quack!"
+ },
+ {
+  "lang": "en",
+  "key": "sheep",
+  "text": "Sheep!"
+ },
+ {
+  "lang": "en",
+  "key": "baa",
+  "text": "Baa!"
+ },
+ {
+  "lang": "en",
+  "key": "goat",
+  "text": "Goat!"
+ },
+ {
+  "lang": "en",
+  "key": "maa",
+  "text": "Maa!"
+ },
+ {
+  "lang": "en",
+  "key": "pig",
+  "text": "Pig!"
+ },
+ {
+  "lang": "en",
+  "key": "oink-oink",
+  "text": "Oink oink!"
+ },
+ {
+  "lang": "en",
+  "key": "horse",
+  "text": "Horse!"
+ },
+ {
+  "lang": "en",
+  "key": "neigh",
+  "text": "Neigh!"
+ },
+ {
+  "lang": "en",
+  "key": "lion",
+  "text": "Lion!"
+ },
+ {
+  "lang": "en",
+  "key": "roar",
+  "text": "Roar!"
+ },
+ {
+  "lang": "en",
+  "key": "tiger",
+  "text": "Tiger!"
+ },
+ {
+  "lang": "en",
+  "key": "frog",
+  "text": "Frog!"
+ },
+ {
+  "lang": "en",
+  "key": "ribbit",
+  "text": "Ribbit!"
+ },
+ {
+  "lang": "en",
+  "key": "bird",
+  "text": "Bird!"
+ },
+ {
+  "lang": "en",
+  "key": "tweet-tweet",
+  "text": "Tweet tweet!"
+ },
+ {
+  "lang": "en",
+  "key": "owl",
+  "text": "Owl!"
+ },
+ {
+  "lang": "en",
+  "key": "hoo-hoo",
+  "text": "Hoo hoo!"
+ },
+ {
+  "lang": "en",
+  "key": "bee",
+  "text": "Bee!"
+ },
+ {
+  "lang": "en",
+  "key": "buzz",
+  "text": "Buzz!"
+ },
+ {
+  "lang": "en",
+  "key": "monkey",
+  "text": "Monkey!"
+ },
+ {
+  "lang": "en",
+  "key": "ooh-ooh-aah-aah",
+  "text": "Ooh ooh aah aah!"
+ },
+ {
+  "lang": "en",
+  "key": "mouse",
+  "text": "Mouse!"
+ },
+ {
+  "lang": "en",
+  "key": "squeak",
+  "text": "Squeak!"
+ },
+ {
+  "lang": "en",
+  "key": "snake",
+  "text": "Snake!"
+ },
+ {
+  "lang": "en",
+  "key": "hisss",
+  "text": "Hisss!"
+ },
+ {
+  "lang": "en",
+  "key": "elephant",
+  "text": "Elephant!"
+ },
+ {
+  "lang": "en",
+  "key": "pawoooo",
+  "text": "Pawoooo!"
+ },
+ {
+  "lang": "en",
+  "key": "rabbit",
+  "text": "Rabbit!"
+ },
+ {
+  "lang": "en",
+  "key": "bear",
+  "text": "Bear!"
+ },
+ {
+  "lang": "en",
+  "key": "grrrr",
+  "text": "Grrrr!"
+ },
+ {
+  "lang": "en",
+  "key": "giraffe",
+  "text": "Giraffe!"
+ },
+ {
+  "lang": "en",
+  "key": "zebra",
+  "text": "Zebra!"
+ },
+ {
+  "lang": "en",
+  "key": "panda",
+  "text": "Panda!"
+ },
+ {
+  "lang": "en",
+  "key": "crocodile",
+  "text": "Crocodile!"
+ },
+ {
+  "lang": "en",
+  "key": "butterfly",
+  "text": "Butterfly!"
+ },
+ {
+  "lang": "en",
+  "key": "ant",
+  "text": "Ant!"
+ },
+ {
+  "lang": "en",
+  "key": "snail",
+  "text": "Snail!"
+ },
+ {
+  "lang": "en",
+  "key": "sea-animals",
+  "text": "Sea Animals!"
+ },
+ {
+  "lang": "en",
+  "key": "fish",
+  "text": "Fish!"
+ },
+ {
+  "lang": "en",
+  "key": "whale",
+  "text": "Whale!"
+ },
+ {
+  "lang": "en",
+  "key": "ooooooo",
+  "text": "Ooooooo!"
+ },
+ {
+  "lang": "en",
+  "key": "dolphin",
+  "text": "Dolphin!"
+ },
+ {
+  "lang": "en",
+  "key": "eee-eee",
+  "text": "Eee eee!"
+ },
+ {
+  "lang": "en",
+  "key": "shark",
+  "text": "Shark!"
+ },
+ {
+  "lang": "en",
+  "key": "octopus",
+  "text": "Octopus!"
+ },
+ {
+  "lang": "en",
+  "key": "crab",
+  "text": "Crab!"
+ },
+ {
+  "lang": "en",
+  "key": "turtle",
+  "text": "Turtle!"
+ },
+ {
+  "lang": "en",
+  "key": "shrimp",
+  "text": "Shrimp!"
+ },
+ {
+  "lang": "en",
+  "key": "snap-snap",
+  "text": "Snap snap!"
+ },
+ {
+  "lang": "en",
+  "key": "seal",
+  "text": "Seal!"
+ },
+ {
+  "lang": "en",
+  "key": "arf-arf",
+  "text": "Arf arf!"
+ },
+ {
+  "lang": "en",
+  "key": "penguin",
+  "text": "Penguin!"
+ },
+ {
+  "lang": "en",
+  "key": "honk-honk",
+  "text": "Honk honk!"
+ },
+ {
+  "lang": "en",
+  "key": "fruits",
+  "text": "Fruits!"
+ },
+ {
+  "lang": "en",
+  "key": "apple",
+  "text": "Apple!"
+ },
+ {
+  "lang": "en",
+  "key": "banana",
+  "text": "Banana!"
+ },
+ {
+  "lang": "en",
+  "key": "orange",
+  "text": "Orange!"
+ },
+ {
+  "lang": "en",
+  "key": "grapes",
+  "text": "Grapes!"
+ },
+ {
+  "lang": "en",
+  "key": "watermelon",
+  "text": "Watermelon!"
+ },
+ {
+  "lang": "en",
+  "key": "strawberry",
+  "text": "Strawberry!"
+ },
+ {
+  "lang": "en",
+  "key": "pineapple",
+  "text": "Pineapple!"
+ },
+ {
+  "lang": "en",
+  "key": "mango",
+  "text": "Mango!"
+ },
+ {
+  "lang": "en",
+  "key": "pear",
+  "text": "Pear!"
+ },
+ {
+  "lang": "en",
+  "key": "cherry",
+  "text": "Cherry!"
+ },
+ {
+  "lang": "en",
+  "key": "coconut",
+  "text": "Coconut!"
+ },
+ {
+  "lang": "en",
+  "key": "lemon",
+  "text": "Lemon!"
+ },
+ {
+  "lang": "en",
+  "key": "kiwi",
+  "text": "Kiwi!"
+ },
+ {
+  "lang": "en",
+  "key": "peach",
+  "text": "Peach!"
+ },
+ {
+  "lang": "en",
+  "key": "vegetables",
+  "text": "Vegetables!"
+ },
+ {
+  "lang": "en",
+  "key": "carrot",
+  "text": "Carrot!"
+ },
+ {
+  "lang": "en",
+  "key": "corn",
+  "text": "Corn!"
+ },
+ {
+  "lang": "en",
+  "key": "broccoli",
+  "text": "Broccoli!"
+ },
+ {
+  "lang": "en",
+  "key": "tomato",
+  "text": "Tomato!"
+ },
+ {
+  "lang": "en",
+  "key": "potato",
+  "text": "Potato!"
+ },
+ {
+  "lang": "en",
+  "key": "cucumber",
+  "text": "Cucumber!"
+ },
+ {
+  "lang": "en",
+  "key": "eggplant",
+  "text": "Eggplant!"
+ },
+ {
+  "lang": "en",
+  "key": "onion",
+  "text": "Onion!"
+ },
+ {
+  "lang": "en",
+  "key": "garlic",
+  "text": "Garlic!"
+ },
+ {
+  "lang": "en",
+  "key": "chili",
+  "text": "Chili!"
+ },
+ {
+  "lang": "en",
+  "key": "mushroom",
+  "text": "Mushroom!"
+ },
+ {
+  "lang": "en",
+  "key": "lettuce",
+  "text": "Lettuce!"
+ },
+ {
+  "lang": "en",
+  "key": "food-drinks",
+  "text": "Food & Drinks!"
+ },
+ {
+  "lang": "en",
+  "key": "bread",
+  "text": "Bread!"
+ },
+ {
+  "lang": "en",
+  "key": "rice",
+  "text": "Rice!"
+ },
+ {
+  "lang": "en",
+  "key": "egg",
+  "text": "Egg!"
+ },
+ {
+  "lang": "en",
+  "key": "milk",
+  "text": "Milk!"
+ },
+ {
+  "lang": "en",
+  "key": "water",
+  "text": "Water!"
+ },
+ {
+  "lang": "en",
+  "key": "noodles",
+  "text": "Noodles!"
+ },
+ {
+  "lang": "en",
+  "key": "soup",
+  "text": "Soup!"
+ },
+ {
+  "lang": "en",
+  "key": "cheese",
+  "text": "Cheese!"
+ },
+ {
+  "lang": "en",
+  "key": "cookie",
+  "text": "Cookie!"
+ },
+ {
+  "lang": "en",
+  "key": "cake",
+  "text": "Cake!"
+ },
+ {
+  "lang": "en",
+  "key": "ice-cream",
+  "text": "Ice Cream!"
+ },
+ {
+  "lang": "en",
+  "key": "pizza",
+  "text": "Pizza!"
+ },
+ {
+  "lang": "en",
+  "key": "honey",
+  "text": "Honey!"
+ },
+ {
+  "lang": "en",
+  "key": "juice",
+  "text": "Juice!"
+ },
+ {
+  "lang": "en",
+  "key": "vehicles",
+  "text": "Vehicles!"
+ },
+ {
+  "lang": "en",
+  "key": "car",
+  "text": "Car!"
+ },
+ {
+  "lang": "en",
+  "key": "vroom-vroom",
+  "text": "Vroom vroom!"
+ },
+ {
+  "lang": "en",
+  "key": "bus",
+  "text": "Bus!"
+ },
+ {
+  "lang": "en",
+  "key": "beep-beep",
+  "text": "Beep beep!"
+ },
+ {
+  "lang": "en",
+  "key": "train",
+  "text": "Train!"
+ },
+ {
+  "lang": "en",
+  "key": "choo-choo",
+  "text": "Choo choo!"
+ },
+ {
+  "lang": "en",
+  "key": "airplane",
+  "text": "Airplane!"
+ },
+ {
+  "lang": "en",
+  "key": "zoooom",
+  "text": "Zoooom!"
+ },
+ {
+  "lang": "en",
+  "key": "boat",
+  "text": "Boat!"
+ },
+ {
+  "lang": "en",
+  "key": "bicycle",
+  "text": "Bicycle!"
+ },
+ {
+  "lang": "en",
+  "key": "ring-ring",
+  "text": "Ring ring!"
+ },
+ {
+  "lang": "en",
+  "key": "motorcycle",
+  "text": "Motorcycle!"
+ },
+ {
+  "lang": "en",
+  "key": "vroom",
+  "text": "Vroom!"
+ },
+ {
+  "lang": "en",
+  "key": "truck",
+  "text": "Truck!"
+ },
+ {
+  "lang": "en",
+  "key": "fire-truck",
+  "text": "Fire Truck!"
+ },
+ {
+  "lang": "en",
+  "key": "nee-naw-nee-naw",
+  "text": "Nee naw nee naw!"
+ },
+ {
+  "lang": "en",
+  "key": "police-car",
+  "text": "Police Car!"
+ },
+ {
+  "lang": "en",
+  "key": "ambulance",
+  "text": "Ambulance!"
+ },
+ {
+  "lang": "en",
+  "key": "helicopter",
+  "text": "Helicopter!"
+ },
+ {
+  "lang": "en",
+  "key": "chop-chop-chop",
+  "text": "Chop chop chop!"
+ },
+ {
+  "lang": "en",
+  "key": "tractor",
+  "text": "Tractor!"
+ },
+ {
+  "lang": "en",
+  "key": "rocket",
+  "text": "Rocket!"
+ },
+ {
+  "lang": "en",
+  "key": "whoosh",
+  "text": "Whoosh!"
+ },
+ {
+  "lang": "en",
+  "key": "things",
+  "text": "Things!"
+ },
+ {
+  "lang": "en",
+  "key": "ball",
+  "text": "Ball!"
+ },
+ {
+  "lang": "en",
+  "key": "house",
+  "text": "House!"
+ },
+ {
+  "lang": "en",
+  "key": "book",
+  "text": "Book!"
+ },
+ {
+  "lang": "en",
+  "key": "chair",
+  "text": "Chair!"
+ },
+ {
+  "lang": "en",
+  "key": "bed",
+  "text": "Bed!"
+ },
+ {
+  "lang": "en",
+  "key": "door",
+  "text": "Door!"
+ },
+ {
+  "lang": "en",
+  "key": "lamp",
+  "text": "Lamp!"
+ },
+ {
+  "lang": "en",
+  "key": "clock",
+  "text": "Clock!"
+ },
+ {
+  "lang": "en",
+  "key": "tick-tock",
+  "text": "Tick tock!"
+ },
+ {
+  "lang": "en",
+  "key": "phone",
+  "text": "Phone!"
+ },
+ {
+  "lang": "en",
+  "key": "umbrella",
+  "text": "Umbrella!"
+ },
+ {
+  "lang": "en",
+  "key": "key",
+  "text": "Key!"
+ },
+ {
+  "lang": "en",
+  "key": "spoon",
+  "text": "Spoon!"
+ },
+ {
+  "lang": "en",
+  "key": "toothbrush",
+  "text": "Toothbrush!"
+ },
+ {
+  "lang": "en",
+  "key": "pencil",
+  "text": "Pencil!"
+ },
+ {
+  "lang": "en",
+  "key": "scissors",
+  "text": "Scissors!"
+ },
+ {
+  "lang": "en",
+  "key": "bag",
+  "text": "Bag!"
+ },
+ {
+  "lang": "en",
+  "key": "balloon",
+  "text": "Balloon!"
+ },
+ {
+  "lang": "en",
+  "key": "teddy-bear",
+  "text": "Teddy Bear!"
+ },
+ {
+  "lang": "en",
+  "key": "clothes",
+  "text": "Clothes!"
+ },
+ {
+  "lang": "en",
+  "key": "shirt",
+  "text": "Shirt!"
+ },
+ {
+  "lang": "en",
+  "key": "pants",
+  "text": "Pants!"
+ },
+ {
+  "lang": "en",
+  "key": "dress",
+  "text": "Dress!"
+ },
+ {
+  "lang": "en",
+  "key": "socks",
+  "text": "Socks!"
+ },
+ {
+  "lang": "en",
+  "key": "shoes",
+  "text": "Shoes!"
+ },
+ {
+  "lang": "en",
+  "key": "hat",
+  "text": "Hat!"
+ },
+ {
+  "lang": "en",
+  "key": "jacket",
+  "text": "Jacket!"
+ },
+ {
+  "lang": "en",
+  "key": "glasses",
+  "text": "Glasses!"
+ },
+ {
+  "lang": "en",
+  "key": "gloves",
+  "text": "Gloves!"
+ },
+ {
+  "lang": "en",
+  "key": "scarf",
+  "text": "Scarf!"
+ },
+ {
+  "lang": "en",
+  "key": "body",
+  "text": "Body!"
+ },
+ {
+  "lang": "en",
+  "key": "eyes",
+  "text": "Eyes!"
+ },
+ {
+  "lang": "en",
+  "key": "nose",
+  "text": "Nose!"
+ },
+ {
+  "lang": "en",
+  "key": "ear",
+  "text": "Ear!"
+ },
+ {
+  "lang": "en",
+  "key": "mouth",
+  "text": "Mouth!"
+ },
+ {
+  "lang": "en",
+  "key": "tongue",
+  "text": "Tongue!"
+ },
+ {
+  "lang": "en",
+  "key": "teeth",
+  "text": "Teeth!"
+ },
+ {
+  "lang": "en",
+  "key": "hand",
+  "text": "Hand!"
+ },
+ {
+  "lang": "en",
+  "key": "foot",
+  "text": "Foot!"
+ },
+ {
+  "lang": "en",
+  "key": "arm",
+  "text": "Arm!"
+ },
+ {
+  "lang": "en",
+  "key": "family",
+  "text": "Family!"
+ },
+ {
+  "lang": "en",
+  "key": "mom",
+  "text": "Mom!"
+ },
+ {
+  "lang": "en",
+  "key": "dad",
+  "text": "Dad!"
+ },
+ {
+  "lang": "en",
+  "key": "baby",
+  "text": "Baby!"
+ },
+ {
+  "lang": "en",
+  "key": "grandma",
+  "text": "Grandma!"
+ },
+ {
+  "lang": "en",
+  "key": "grandpa",
+  "text": "Grandpa!"
+ },
+ {
+  "lang": "en",
+  "key": "boy",
+  "text": "Boy!"
+ },
+ {
+  "lang": "en",
+  "key": "girl",
+  "text": "Girl!"
+ },
+ {
+  "lang": "en",
+  "key": "colors",
+  "text": "Colors!"
+ },
+ {
+  "lang": "en",
+  "key": "red",
+  "text": "Red!"
+ },
+ {
+  "lang": "en",
+  "key": "yellow",
+  "text": "Yellow!"
+ },
+ {
+  "lang": "en",
+  "key": "green",
+  "text": "Green!"
+ },
+ {
+  "lang": "en",
+  "key": "blue",
+  "text": "Blue!"
+ },
+ {
+  "lang": "en",
+  "key": "purple",
+  "text": "Purple!"
+ },
+ {
+  "lang": "en",
+  "key": "pink",
+  "text": "Pink!"
+ },
+ {
+  "lang": "en",
+  "key": "brown",
+  "text": "Brown!"
+ },
+ {
+  "lang": "en",
+  "key": "black",
+  "text": "Black!"
+ },
+ {
+  "lang": "en",
+  "key": "white",
+  "text": "White!"
+ },
+ {
+  "lang": "en",
+  "key": "gray",
+  "text": "Gray!"
+ },
+ {
+  "lang": "en",
+  "key": "shapes",
+  "text": "Shapes!"
+ },
+ {
+  "lang": "en",
+  "key": "circle",
+  "text": "Circle!"
+ },
+ {
+  "lang": "en",
+  "key": "square",
+  "text": "Square!"
+ },
+ {
+  "lang": "en",
+  "key": "triangle",
+  "text": "Triangle!"
+ },
+ {
+  "lang": "en",
+  "key": "star",
+  "text": "Star!"
+ },
+ {
+  "lang": "en",
+  "key": "heart",
+  "text": "Heart!"
+ },
+ {
+  "lang": "en",
+  "key": "diamond",
+  "text": "Diamond!"
+ },
+ {
+  "lang": "en",
+  "key": "crescent",
+  "text": "Crescent!"
+ },
+ {
+  "lang": "en",
+  "key": "numbers",
+  "text": "Numbers!"
+ },
+ {
+  "lang": "en",
+  "key": "one",
+  "text": "One!"
+ },
+ {
+  "lang": "en",
+  "key": "two",
+  "text": "Two!"
+ },
+ {
+  "lang": "en",
+  "key": "three",
+  "text": "Three!"
+ },
+ {
+  "lang": "en",
+  "key": "four",
+  "text": "Four!"
+ },
+ {
+  "lang": "en",
+  "key": "five",
+  "text": "Five!"
+ },
+ {
+  "lang": "en",
+  "key": "six",
+  "text": "Six!"
+ },
+ {
+  "lang": "en",
+  "key": "seven",
+  "text": "Seven!"
+ },
+ {
+  "lang": "en",
+  "key": "eight",
+  "text": "Eight!"
+ },
+ {
+  "lang": "en",
+  "key": "nine",
+  "text": "Nine!"
+ },
+ {
+  "lang": "en",
+  "key": "ten",
+  "text": "Ten!"
+ },
+ {
+  "lang": "en",
+  "key": "abc",
+  "text": "ABC!"
+ },
+ {
+  "lang": "en",
+  "key": "a",
+  "text": "ay!"
+ },
+ {
+  "lang": "en",
+  "key": "b",
+  "text": "bee!"
+ },
+ {
+  "lang": "en",
+  "key": "c",
+  "text": "see!"
+ },
+ {
+  "lang": "en",
+  "key": "d",
+  "text": "dee!"
+ },
+ {
+  "lang": "en",
+  "key": "e",
+  "text": "ee!"
+ },
+ {
+  "lang": "en",
+  "key": "f",
+  "text": "ef!"
+ },
+ {
+  "lang": "en",
+  "key": "g",
+  "text": "jee!"
+ },
+ {
+  "lang": "en",
+  "key": "h",
+  "text": "aitch!"
+ },
+ {
+  "lang": "en",
+  "key": "i",
+  "text": "eye!"
+ },
+ {
+  "lang": "en",
+  "key": "j",
+  "text": "jay!"
+ },
+ {
+  "lang": "en",
+  "key": "k",
+  "text": "kay!"
+ },
+ {
+  "lang": "en",
+  "key": "l",
+  "text": "el!"
+ },
+ {
+  "lang": "en",
+  "key": "m",
+  "text": "em!"
+ },
+ {
+  "lang": "en",
+  "key": "n",
+  "text": "en!"
+ },
+ {
+  "lang": "en",
+  "key": "o",
+  "text": "oh!"
+ },
+ {
+  "lang": "en",
+  "key": "p",
+  "text": "pee!"
+ },
+ {
+  "lang": "en",
+  "key": "q",
+  "text": "cue!"
+ },
+ {
+  "lang": "en",
+  "key": "r",
+  "text": "ar!"
+ },
+ {
+  "lang": "en",
+  "key": "s",
+  "text": "ess!"
+ },
+ {
+  "lang": "en",
+  "key": "t",
+  "text": "tee!"
+ },
+ {
+  "lang": "en",
+  "key": "u",
+  "text": "you!"
+ },
+ {
+  "lang": "en",
+  "key": "v",
+  "text": "vee!"
+ },
+ {
+  "lang": "en",
+  "key": "w",
+  "text": "double you!"
+ },
+ {
+  "lang": "en",
+  "key": "x",
+  "text": "ex!"
+ },
+ {
+  "lang": "en",
+  "key": "y",
+  "text": "why!"
+ },
+ {
+  "lang": "en",
+  "key": "z",
+  "text": "zee!"
+ },
+ {
+  "lang": "en",
+  "key": "nature",
+  "text": "Nature!"
+ },
+ {
+  "lang": "en",
+  "key": "sun",
+  "text": "Sun!"
+ },
+ {
+  "lang": "en",
+  "key": "moon",
+  "text": "Moon!"
+ },
+ {
+  "lang": "en",
+  "key": "cloud",
+  "text": "Cloud!"
+ },
+ {
+  "lang": "en",
+  "key": "rain",
+  "text": "Rain!"
+ },
+ {
+  "lang": "en",
+  "key": "pitter-patter",
+  "text": "Pitter patter!"
+ },
+ {
+  "lang": "en",
+  "key": "rainbow",
+  "text": "Rainbow!"
+ },
+ {
+  "lang": "en",
+  "key": "lightning",
+  "text": "Lightning!"
+ },
+ {
+  "lang": "en",
+  "key": "boom",
+  "text": "Boom!"
+ },
+ {
+  "lang": "en",
+  "key": "snow",
+  "text": "Snow!"
+ },
+ {
+  "lang": "en",
+  "key": "tree",
+  "text": "Tree!"
+ },
+ {
+  "lang": "en",
+  "key": "flower",
+  "text": "Flower!"
+ },
+ {
+  "lang": "en",
+  "key": "leaf",
+  "text": "Leaf!"
+ },
+ {
+  "lang": "en",
+  "key": "mountain",
+  "text": "Mountain!"
+ },
+ {
+  "lang": "en",
+  "key": "sea",
+  "text": "Sea!"
+ },
+ {
+  "lang": "en",
+  "key": "fire",
+  "text": "Fire!"
+ },
+ {
+  "lang": "en",
+  "key": "balonku-ada-lima",
+  "text": "Balonku Ada Lima!"
+ },
+ {
+  "lang": "en",
+  "key": "cicak-cicak-di-dinding",
+  "text": "Cicak-cicak di Dinding!"
+ },
+ {
+  "lang": "en",
+  "key": "pelangi-pelangi",
+  "text": "Pelangi-pelangi!"
+ },
+ {
+  "lang": "en",
+  "key": "bintang-kecil",
+  "text": "Bintang Kecil!"
+ },
+ {
+  "lang": "en",
+  "key": "naik-kereta-api",
+  "text": "Naik Kereta Api!"
+ },
+ {
+  "lang": "en",
+  "key": "burung-kakak-tua",
+  "text": "Burung Kakak Tua!"
+ },
+ {
+  "lang": "en",
+  "key": "twinkle-twinkle-little-star",
+  "text": "Twinkle Twinkle Little Star!"
+ },
+ {
+  "lang": "en",
+  "key": "mary-had-a-little-lamb",
+  "text": "Mary Had a Little Lamb!"
+ },
+ {
+  "lang": "en",
+  "key": "row-row-row-your-boat",
+  "text": "Row, Row, Row Your Boat!"
+ },
+ {
+  "lang": "en",
+  "key": "old-macdonald",
+  "text": "Old MacDonald!"
+ },
+ {
+  "lang": "en",
+  "key": "ode-to-joy",
+  "text": "Ode to Joy!"
+ },
+ {
+  "lang": "en",
+  "key": "bubbles",
+  "text": "Bubbles!"
+ },
+ {
+  "lang": "en",
+  "key": "whack-a-mole",
+  "text": "Whack-a-Mole!"
+ },
+ {
+  "lang": "en",
+  "key": "piano",
+  "text": "Piano!"
+ },
+ {
+  "lang": "en",
+  "key": "play-a-song",
+  "text": "Play a Song!"
+ },
+ {
+  "lang": "en",
+  "key": "flash-cards",
+  "text": "Flash Cards!"
+ },
+ {
+  "lang": "en",
+  "key": "shapes-3d",
+  "text": "Shapes 3D!"
+ },
+ {
+  "lang": "en",
+  "key": "great-job",
+  "text": "Great job!"
+ },
+ {
+  "lang": "en",
+  "key": "well-done",
+  "text": "Well done!"
+ },
+ {
+  "lang": "en",
+  "key": "yay-you-did-it",
+  "text": "Yay! You did it!"
+ },
+ {
+  "lang": "en",
+  "key": "yay",
+  "text": "Yay!"
+ },
+ {
+  "lang": "en",
+  "key": "yay-well-done",
+  "text": "Yay! Well done!"
+ },
+ {
+  "lang": "en",
+  "key": "yay-you-played-the-song",
+  "text": "Yay! You played the song!"
+ },
+ {
+  "lang": "en",
+  "key": "1",
+  "text": "1!"
+ },
+ {
+  "lang": "en",
+  "key": "2",
+  "text": "2!"
+ },
+ {
+  "lang": "en",
+  "key": "3",
+  "text": "3!"
+ },
+ {
+  "lang": "en",
+  "key": "4",
+  "text": "4!"
+ },
+ {
+  "lang": "en",
+  "key": "5",
+  "text": "5!"
+ },
+ {
+  "lang": "en",
+  "key": "6",
+  "text": "6!"
+ },
+ {
+  "lang": "en",
+  "key": "7",
+  "text": "7!"
+ },
+ {
+  "lang": "en",
+  "key": "8",
+  "text": "8!"
+ },
+ {
+  "lang": "en",
+  "key": "9",
+  "text": "9!"
+ },
+ {
+  "lang": "en",
+  "key": "10",
+  "text": "10!"
+ },
+ {
+  "lang": "en",
+  "key": "11",
+  "text": "11!"
+ },
+ {
+  "lang": "en",
+  "key": "12",
+  "text": "12!"
+ },
+ {
+  "lang": "en",
+  "key": "13",
+  "text": "13!"
+ },
+ {
+  "lang": "en",
+  "key": "14",
+  "text": "14!"
+ },
+ {
+  "lang": "en",
+  "key": "15",
+  "text": "15!"
+ },
+ {
+  "lang": "en",
+  "key": "16",
+  "text": "16!"
+ },
+ {
+  "lang": "en",
+  "key": "17",
+  "text": "17!"
+ },
+ {
+  "lang": "en",
+  "key": "18",
+  "text": "18!"
+ },
+ {
+  "lang": "en",
+  "key": "19",
+  "text": "19!"
+ },
+ {
+  "lang": "en",
+  "key": "20",
+  "text": "20!"
+ },
+ {
+  "lang": "en",
+  "key": "21",
+  "text": "21!"
+ },
+ {
+  "lang": "en",
+  "key": "22",
+  "text": "22!"
+ },
+ {
+  "lang": "en",
+  "key": "23",
+  "text": "23!"
+ },
+ {
+  "lang": "en",
+  "key": "24",
+  "text": "24!"
+ },
+ {
+  "lang": "en",
+  "key": "25",
+  "text": "25!"
+ },
+ {
+  "lang": "en",
+  "key": "26",
+  "text": "26!"
+ },
+ {
+  "lang": "en",
+  "key": "27",
+  "text": "27!"
+ },
+ {
+  "lang": "en",
+  "key": "28",
+  "text": "28!"
+ },
+ {
+  "lang": "en",
+  "key": "29",
+  "text": "29!"
+ },
+ {
+  "lang": "en",
+  "key": "30",
+  "text": "30!"
+ },
+ {
+  "lang": "en",
+  "key": "31",
+  "text": "31!"
+ },
+ {
+  "lang": "en",
+  "key": "32",
+  "text": "32!"
+ },
+ {
+  "lang": "en",
+  "key": "33",
+  "text": "33!"
+ },
+ {
+  "lang": "en",
+  "key": "34",
+  "text": "34!"
+ },
+ {
+  "lang": "en",
+  "key": "35",
+  "text": "35!"
+ },
+ {
+  "lang": "en",
+  "key": "36",
+  "text": "36!"
+ },
+ {
+  "lang": "en",
+  "key": "37",
+  "text": "37!"
+ },
+ {
+  "lang": "en",
+  "key": "38",
+  "text": "38!"
+ },
+ {
+  "lang": "en",
+  "key": "39",
+  "text": "39!"
+ },
+ {
+  "lang": "en",
+  "key": "40",
+  "text": "40!"
+ },
+ {
+  "lang": "en",
+  "key": "41",
+  "text": "41!"
+ },
+ {
+  "lang": "en",
+  "key": "42",
+  "text": "42!"
+ },
+ {
+  "lang": "en",
+  "key": "43",
+  "text": "43!"
+ },
+ {
+  "lang": "en",
+  "key": "44",
+  "text": "44!"
+ },
+ {
+  "lang": "en",
+  "key": "45",
+  "text": "45!"
+ },
+ {
+  "lang": "en",
+  "key": "46",
+  "text": "46!"
+ },
+ {
+  "lang": "en",
+  "key": "47",
+  "text": "47!"
+ },
+ {
+  "lang": "en",
+  "key": "48",
+  "text": "48!"
+ },
+ {
+  "lang": "en",
+  "key": "49",
+  "text": "49!"
+ },
+ {
+  "lang": "en",
+  "key": "50",
+  "text": "50!"
+ },
+ {
+  "lang": "en",
+  "key": "51",
+  "text": "51!"
+ },
+ {
+  "lang": "en",
+  "key": "52",
+  "text": "52!"
+ },
+ {
+  "lang": "en",
+  "key": "53",
+  "text": "53!"
+ },
+ {
+  "lang": "en",
+  "key": "54",
+  "text": "54!"
+ },
+ {
+  "lang": "en",
+  "key": "55",
+  "text": "55!"
+ },
+ {
+  "lang": "en",
+  "key": "56",
+  "text": "56!"
+ },
+ {
+  "lang": "en",
+  "key": "57",
+  "text": "57!"
+ },
+ {
+  "lang": "en",
+  "key": "58",
+  "text": "58!"
+ },
+ {
+  "lang": "en",
+  "key": "59",
+  "text": "59!"
+ },
+ {
+  "lang": "en",
+  "key": "60",
+  "text": "60!"
+ },
+ {
+  "lang": "en",
+  "key": "61",
+  "text": "61!"
+ },
+ {
+  "lang": "en",
+  "key": "62",
+  "text": "62!"
+ },
+ {
+  "lang": "en",
+  "key": "63",
+  "text": "63!"
+ },
+ {
+  "lang": "en",
+  "key": "64",
+  "text": "64!"
+ },
+ {
+  "lang": "en",
+  "key": "65",
+  "text": "65!"
+ },
+ {
+  "lang": "en",
+  "key": "66",
+  "text": "66!"
+ },
+ {
+  "lang": "en",
+  "key": "67",
+  "text": "67!"
+ },
+ {
+  "lang": "en",
+  "key": "68",
+  "text": "68!"
+ },
+ {
+  "lang": "en",
+  "key": "69",
+  "text": "69!"
+ },
+ {
+  "lang": "en",
+  "key": "70",
+  "text": "70!"
+ },
+ {
+  "lang": "en",
+  "key": "71",
+  "text": "71!"
+ },
+ {
+  "lang": "en",
+  "key": "72",
+  "text": "72!"
+ },
+ {
+  "lang": "en",
+  "key": "73",
+  "text": "73!"
+ },
+ {
+  "lang": "en",
+  "key": "74",
+  "text": "74!"
+ },
+ {
+  "lang": "en",
+  "key": "75",
+  "text": "75!"
+ },
+ {
+  "lang": "en",
+  "key": "76",
+  "text": "76!"
+ },
+ {
+  "lang": "en",
+  "key": "77",
+  "text": "77!"
+ },
+ {
+  "lang": "en",
+  "key": "78",
+  "text": "78!"
+ },
+ {
+  "lang": "en",
+  "key": "79",
+  "text": "79!"
+ },
+ {
+  "lang": "en",
+  "key": "80",
+  "text": "80!"
+ },
+ {
+  "lang": "en",
+  "key": "81",
+  "text": "81!"
+ },
+ {
+  "lang": "en",
+  "key": "82",
+  "text": "82!"
+ },
+ {
+  "lang": "en",
+  "key": "83",
+  "text": "83!"
+ },
+ {
+  "lang": "en",
+  "key": "84",
+  "text": "84!"
+ },
+ {
+  "lang": "en",
+  "key": "85",
+  "text": "85!"
+ },
+ {
+  "lang": "en",
+  "key": "86",
+  "text": "86!"
+ },
+ {
+  "lang": "en",
+  "key": "87",
+  "text": "87!"
+ },
+ {
+  "lang": "en",
+  "key": "88",
+  "text": "88!"
+ },
+ {
+  "lang": "en",
+  "key": "89",
+  "text": "89!"
+ },
+ {
+  "lang": "en",
+  "key": "90",
+  "text": "90!"
+ },
+ {
+  "lang": "en",
+  "key": "91",
+  "text": "91!"
+ },
+ {
+  "lang": "en",
+  "key": "92",
+  "text": "92!"
+ },
+ {
+  "lang": "en",
+  "key": "93",
+  "text": "93!"
+ },
+ {
+  "lang": "en",
+  "key": "94",
+  "text": "94!"
+ },
+ {
+  "lang": "en",
+  "key": "95",
+  "text": "95!"
+ },
+ {
+  "lang": "en",
+  "key": "96",
+  "text": "96!"
+ },
+ {
+  "lang": "en",
+  "key": "97",
+  "text": "97!"
+ },
+ {
+  "lang": "en",
+  "key": "98",
+  "text": "98!"
+ },
+ {
+  "lang": "en",
+  "key": "99",
+  "text": "99!"
+ },
+ {
+  "lang": "en",
+  "key": "100",
+  "text": "100!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-a",
+  "text": "ay!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-b",
+  "text": "bee!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-c",
+  "text": "see!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-d",
+  "text": "dee!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-e",
+  "text": "ee!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-f",
+  "text": "ef!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-g",
+  "text": "jee!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-h",
+  "text": "aitch!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-i",
+  "text": "eye!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-j",
+  "text": "jay!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-k",
+  "text": "kay!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-l",
+  "text": "el!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-m",
+  "text": "em!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-n",
+  "text": "en!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-o",
+  "text": "oh!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-p",
+  "text": "pee!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-q",
+  "text": "cue!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-r",
+  "text": "ar!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-s",
+  "text": "ess!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-t",
+  "text": "tee!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-u",
+  "text": "you!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-v",
+  "text": "vee!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-w",
+  "text": "double you!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-x",
+  "text": "ex!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-y",
+  "text": "why!"
+ },
+ {
+  "lang": "en",
+  "key": "letter-z",
+  "text": "zee!"
+ },
+ {
+  "lang": "id",
+  "key": "hewan",
+  "text": "Hewan!"
+ },
+ {
+  "lang": "id",
+  "key": "anjing",
+  "text": "Anjing!"
+ },
+ {
+  "lang": "id",
+  "key": "guk-guk",
+  "text": "Guk guk!"
+ },
+ {
+  "lang": "id",
+  "key": "kucing",
+  "text": "Kucing!"
+ },
+ {
+  "lang": "id",
+  "key": "meong",
+  "text": "Meong!"
+ },
+ {
+  "lang": "id",
+  "key": "sapi",
+  "text": "Sapi!"
+ },
+ {
+  "lang": "id",
+  "key": "mooo",
+  "text": "Mooo!"
+ },
+ {
+  "lang": "id",
+  "key": "ayam",
+  "text": "Ayam!"
+ },
+ {
+  "lang": "id",
+  "key": "petok-petok",
+  "text": "Petok petok!"
+ },
+ {
+  "lang": "id",
+  "key": "bebek",
+  "text": "Bebek!"
+ },
+ {
+  "lang": "id",
+  "key": "kwek-kwek",
+  "text": "Kwek kwek!"
+ },
+ {
+  "lang": "id",
+  "key": "domba",
+  "text": "Domba!"
+ },
+ {
+  "lang": "id",
+  "key": "mbeek",
+  "text": "Mbeek!"
+ },
+ {
+  "lang": "id",
+  "key": "kambing",
+  "text": "Kambing!"
+ },
+ {
+  "lang": "id",
+  "key": "mbek",
+  "text": "Mbek!"
+ },
+ {
+  "lang": "id",
+  "key": "babi",
+  "text": "Babi!"
+ },
+ {
+  "lang": "id",
+  "key": "ngok-ngok",
+  "text": "Ngok ngok!"
+ },
+ {
+  "lang": "id",
+  "key": "kuda",
+  "text": "Kuda!"
+ },
+ {
+  "lang": "id",
+  "key": "hiiieee",
+  "text": "Hiiieee!"
+ },
+ {
+  "lang": "id",
+  "key": "singa",
+  "text": "Singa!"
+ },
+ {
+  "lang": "id",
+  "key": "auuum",
+  "text": "Auuum!"
+ },
+ {
+  "lang": "id",
+  "key": "harimau",
+  "text": "Harimau!"
+ },
+ {
+  "lang": "id",
+  "key": "katak",
+  "text": "Katak!"
+ },
+ {
+  "lang": "id",
+  "key": "kung-kong",
+  "text": "Kung kong!"
+ },
+ {
+  "lang": "id",
+  "key": "burung",
+  "text": "Burung!"
+ },
+ {
+  "lang": "id",
+  "key": "cuit-cuit",
+  "text": "Cuit cuit!"
+ },
+ {
+  "lang": "id",
+  "key": "burung-hantu",
+  "text": "Burung Hantu!"
+ },
+ {
+  "lang": "id",
+  "key": "uhu-uhu",
+  "text": "Uhu uhu!"
+ },
+ {
+  "lang": "id",
+  "key": "lebah",
+  "text": "Lebah!"
+ },
+ {
+  "lang": "id",
+  "key": "nguuung",
+  "text": "Nguuung!"
+ },
+ {
+  "lang": "id",
+  "key": "monyet",
+  "text": "Monyet!"
+ },
+ {
+  "lang": "id",
+  "key": "uuk-uuk-aak",
+  "text": "Uuk uuk aak!"
+ },
+ {
+  "lang": "id",
+  "key": "tikus",
+  "text": "Tikus!"
+ },
+ {
+  "lang": "id",
+  "key": "cit-cit",
+  "text": "Cit cit!"
+ },
+ {
+  "lang": "id",
+  "key": "ular",
+  "text": "Ular!"
+ },
+ {
+  "lang": "id",
+  "key": "sssss",
+  "text": "Sssss!"
+ },
+ {
+  "lang": "id",
+  "key": "gajah",
+  "text": "Gajah!"
+ },
+ {
+  "lang": "id",
+  "key": "nguooook",
+  "text": "Nguooook!"
+ },
+ {
+  "lang": "id",
+  "key": "kelinci",
+  "text": "Kelinci!"
+ },
+ {
+  "lang": "id",
+  "key": "beruang",
+  "text": "Beruang!"
+ },
+ {
+  "lang": "id",
+  "key": "grrrr",
+  "text": "Grrrr!"
+ },
+ {
+  "lang": "id",
+  "key": "jerapah",
+  "text": "Jerapah!"
+ },
+ {
+  "lang": "id",
+  "key": "zebra",
+  "text": "Zebra!"
+ },
+ {
+  "lang": "id",
+  "key": "panda",
+  "text": "Panda!"
+ },
+ {
+  "lang": "id",
+  "key": "buaya",
+  "text": "Buaya!"
+ },
+ {
+  "lang": "id",
+  "key": "kupu-kupu",
+  "text": "Kupu-kupu!"
+ },
+ {
+  "lang": "id",
+  "key": "semut",
+  "text": "Semut!"
+ },
+ {
+  "lang": "id",
+  "key": "siput",
+  "text": "Siput!"
+ },
+ {
+  "lang": "id",
+  "key": "hewan-laut",
+  "text": "Hewan Laut!"
+ },
+ {
+  "lang": "id",
+  "key": "ikan",
+  "text": "Ikan!"
+ },
+ {
+  "lang": "id",
+  "key": "paus",
+  "text": "Paus!"
+ },
+ {
+  "lang": "id",
+  "key": "uuuuuu",
+  "text": "Uuuuuu!"
+ },
+ {
+  "lang": "id",
+  "key": "lumba-lumba",
+  "text": "Lumba-lumba!"
+ },
+ {
+  "lang": "id",
+  "key": "iii-iii",
+  "text": "Iii iii!"
+ },
+ {
+  "lang": "id",
+  "key": "hiu",
+  "text": "Hiu!"
+ },
+ {
+  "lang": "id",
+  "key": "gurita",
+  "text": "Gurita!"
+ },
+ {
+  "lang": "id",
+  "key": "kepiting",
+  "text": "Kepiting!"
+ },
+ {
+  "lang": "id",
+  "key": "kura-kura",
+  "text": "Kura-kura!"
+ },
+ {
+  "lang": "id",
+  "key": "udang",
+  "text": "Udang!"
+ },
+ {
+  "lang": "id",
+  "key": "kretek-kretek",
+  "text": "Kretek kretek!"
+ },
+ {
+  "lang": "id",
+  "key": "anjing-laut",
+  "text": "Anjing Laut!"
+ },
+ {
+  "lang": "id",
+  "key": "ork-ork",
+  "text": "Ork ork!"
+ },
+ {
+  "lang": "id",
+  "key": "penguin",
+  "text": "Penguin!"
+ },
+ {
+  "lang": "id",
+  "key": "kwak-kwak",
+  "text": "Kwak kwak!"
+ },
+ {
+  "lang": "id",
+  "key": "buah",
+  "text": "Buah!"
+ },
+ {
+  "lang": "id",
+  "key": "apel",
+  "text": "Apel!"
+ },
+ {
+  "lang": "id",
+  "key": "pisang",
+  "text": "Pisang!"
+ },
+ {
+  "lang": "id",
+  "key": "jeruk",
+  "text": "Jeruk!"
+ },
+ {
+  "lang": "id",
+  "key": "anggur",
+  "text": "Anggur!"
+ },
+ {
+  "lang": "id",
+  "key": "semangka",
+  "text": "Semangka!"
+ },
+ {
+  "lang": "id",
+  "key": "stroberi",
+  "text": "Stroberi!"
+ },
+ {
+  "lang": "id",
+  "key": "nanas",
+  "text": "Nanas!"
+ },
+ {
+  "lang": "id",
+  "key": "mangga",
+  "text": "Mangga!"
+ },
+ {
+  "lang": "id",
+  "key": "pir",
+  "text": "Pir!"
+ },
+ {
+  "lang": "id",
+  "key": "ceri",
+  "text": "Ceri!"
+ },
+ {
+  "lang": "id",
+  "key": "kelapa",
+  "text": "Kelapa!"
+ },
+ {
+  "lang": "id",
+  "key": "lemon",
+  "text": "Lemon!"
+ },
+ {
+  "lang": "id",
+  "key": "kiwi",
+  "text": "Kiwi!"
+ },
+ {
+  "lang": "id",
+  "key": "persik",
+  "text": "Persik!"
+ },
+ {
+  "lang": "id",
+  "key": "sayuran",
+  "text": "Sayuran!"
+ },
+ {
+  "lang": "id",
+  "key": "wortel",
+  "text": "Wortel!"
+ },
+ {
+  "lang": "id",
+  "key": "jagung",
+  "text": "Jagung!"
+ },
+ {
+  "lang": "id",
+  "key": "brokoli",
+  "text": "Brokoli!"
+ },
+ {
+  "lang": "id",
+  "key": "tomat",
+  "text": "Tomat!"
+ },
+ {
+  "lang": "id",
+  "key": "kentang",
+  "text": "Kentang!"
+ },
+ {
+  "lang": "id",
+  "key": "timun",
+  "text": "Timun!"
+ },
+ {
+  "lang": "id",
+  "key": "terong",
+  "text": "Terong!"
+ },
+ {
+  "lang": "id",
+  "key": "bawang-merah",
+  "text": "Bawang Merah!"
+ },
+ {
+  "lang": "id",
+  "key": "bawang-putih",
+  "text": "Bawang Putih!"
+ },
+ {
+  "lang": "id",
+  "key": "cabai",
+  "text": "Cabai!"
+ },
+ {
+  "lang": "id",
+  "key": "jamur",
+  "text": "Jamur!"
+ },
+ {
+  "lang": "id",
+  "key": "selada",
+  "text": "Selada!"
+ },
+ {
+  "lang": "id",
+  "key": "makanan-minuman",
+  "text": "Makanan & Minuman!"
+ },
+ {
+  "lang": "id",
+  "key": "roti",
+  "text": "Roti!"
+ },
+ {
+  "lang": "id",
+  "key": "nasi",
+  "text": "Nasi!"
+ },
+ {
+  "lang": "id",
+  "key": "telur",
+  "text": "Telur!"
+ },
+ {
+  "lang": "id",
+  "key": "susu",
+  "text": "Susu!"
+ },
+ {
+  "lang": "id",
+  "key": "air",
+  "text": "Air!"
+ },
+ {
+  "lang": "id",
+  "key": "mi",
+  "text": "Mi!"
+ },
+ {
+  "lang": "id",
+  "key": "sup",
+  "text": "Sup!"
+ },
+ {
+  "lang": "id",
+  "key": "keju",
+  "text": "Keju!"
+ },
+ {
+  "lang": "id",
+  "key": "biskuit",
+  "text": "Biskuit!"
+ },
+ {
+  "lang": "id",
+  "key": "kue",
+  "text": "Kue!"
+ },
+ {
+  "lang": "id",
+  "key": "es-krim",
+  "text": "Es Krim!"
+ },
+ {
+  "lang": "id",
+  "key": "piza",
+  "text": "Piza!"
+ },
+ {
+  "lang": "id",
+  "key": "madu",
+  "text": "Madu!"
+ },
+ {
+  "lang": "id",
+  "key": "jus",
+  "text": "Jus!"
+ },
+ {
+  "lang": "id",
+  "key": "kendaraan",
+  "text": "Kendaraan!"
+ },
+ {
+  "lang": "id",
+  "key": "mobil",
+  "text": "Mobil!"
+ },
+ {
+  "lang": "id",
+  "key": "brum-brum",
+  "text": "Brum brum!"
+ },
+ {
+  "lang": "id",
+  "key": "bus",
+  "text": "Bus!"
+ },
+ {
+  "lang": "id",
+  "key": "tin-tin",
+  "text": "Tin tin!"
+ },
+ {
+  "lang": "id",
+  "key": "kereta",
+  "text": "Kereta!"
+ },
+ {
+  "lang": "id",
+  "key": "tut-tut",
+  "text": "Tut tut!"
+ },
+ {
+  "lang": "id",
+  "key": "pesawat",
+  "text": "Pesawat!"
+ },
+ {
+  "lang": "id",
+  "key": "perahu",
+  "text": "Perahu!"
+ },
+ {
+  "lang": "id",
+  "key": "sepeda",
+  "text": "Sepeda!"
+ },
+ {
+  "lang": "id",
+  "key": "kring-kring",
+  "text": "Kring kring!"
+ },
+ {
+  "lang": "id",
+  "key": "sepeda-motor",
+  "text": "Sepeda Motor!"
+ },
+ {
+  "lang": "id",
+  "key": "brem-brem",
+  "text": "Brem brem!"
+ },
+ {
+  "lang": "id",
+  "key": "truk",
+  "text": "Truk!"
+ },
+ {
+  "lang": "id",
+  "key": "mobil-pemadam",
+  "text": "Mobil Pemadam!"
+ },
+ {
+  "lang": "id",
+  "key": "nguing-nguing",
+  "text": "Nguing nguing!"
+ },
+ {
+  "lang": "id",
+  "key": "mobil-polisi",
+  "text": "Mobil Polisi!"
+ },
+ {
+  "lang": "id",
+  "key": "ambulans",
+  "text": "Ambulans!"
+ },
+ {
+  "lang": "id",
+  "key": "helikopter",
+  "text": "Helikopter!"
+ },
+ {
+  "lang": "id",
+  "key": "wer-wer-wer",
+  "text": "Wer wer wer!"
+ },
+ {
+  "lang": "id",
+  "key": "traktor",
+  "text": "Traktor!"
+ },
+ {
+  "lang": "id",
+  "key": "roket",
+  "text": "Roket!"
+ },
+ {
+  "lang": "id",
+  "key": "wuuush",
+  "text": "Wuuush!"
+ },
+ {
+  "lang": "id",
+  "key": "benda",
+  "text": "Benda!"
+ },
+ {
+  "lang": "id",
+  "key": "bola",
+  "text": "Bola!"
+ },
+ {
+  "lang": "id",
+  "key": "rumah",
+  "text": "Rumah!"
+ },
+ {
+  "lang": "id",
+  "key": "buku",
+  "text": "Buku!"
+ },
+ {
+  "lang": "id",
+  "key": "kursi",
+  "text": "Kursi!"
+ },
+ {
+  "lang": "id",
+  "key": "kasur",
+  "text": "Kasur!"
+ },
+ {
+  "lang": "id",
+  "key": "pintu",
+  "text": "Pintu!"
+ },
+ {
+  "lang": "id",
+  "key": "lampu",
+  "text": "Lampu!"
+ },
+ {
+  "lang": "id",
+  "key": "jam",
+  "text": "Jam!"
+ },
+ {
+  "lang": "id",
+  "key": "tik-tok",
+  "text": "Tik tok!"
+ },
+ {
+  "lang": "id",
+  "key": "telepon",
+  "text": "Telepon!"
+ },
+ {
+  "lang": "id",
+  "key": "payung",
+  "text": "Payung!"
+ },
+ {
+  "lang": "id",
+  "key": "kunci",
+  "text": "Kunci!"
+ },
+ {
+  "lang": "id",
+  "key": "sendok",
+  "text": "Sendok!"
+ },
+ {
+  "lang": "id",
+  "key": "sikat-gigi",
+  "text": "Sikat Gigi!"
+ },
+ {
+  "lang": "id",
+  "key": "pensil",
+  "text": "Pensil!"
+ },
+ {
+  "lang": "id",
+  "key": "gunting",
+  "text": "Gunting!"
+ },
+ {
+  "lang": "id",
+  "key": "tas",
+  "text": "Tas!"
+ },
+ {
+  "lang": "id",
+  "key": "balon",
+  "text": "Balon!"
+ },
+ {
+  "lang": "id",
+  "key": "boneka",
+  "text": "Boneka!"
+ },
+ {
+  "lang": "id",
+  "key": "pakaian",
+  "text": "Pakaian!"
+ },
+ {
+  "lang": "id",
+  "key": "baju",
+  "text": "Baju!"
+ },
+ {
+  "lang": "id",
+  "key": "celana",
+  "text": "Celana!"
+ },
+ {
+  "lang": "id",
+  "key": "gaun",
+  "text": "Gaun!"
+ },
+ {
+  "lang": "id",
+  "key": "kaus-kaki",
+  "text": "Kaus Kaki!"
+ },
+ {
+  "lang": "id",
+  "key": "sepatu",
+  "text": "Sepatu!"
+ },
+ {
+  "lang": "id",
+  "key": "topi",
+  "text": "Topi!"
+ },
+ {
+  "lang": "id",
+  "key": "jaket",
+  "text": "Jaket!"
+ },
+ {
+  "lang": "id",
+  "key": "kacamata",
+  "text": "Kacamata!"
+ },
+ {
+  "lang": "id",
+  "key": "sarung-tangan",
+  "text": "Sarung Tangan!"
+ },
+ {
+  "lang": "id",
+  "key": "syal",
+  "text": "Syal!"
+ },
+ {
+  "lang": "id",
+  "key": "tubuh",
+  "text": "Tubuh!"
+ },
+ {
+  "lang": "id",
+  "key": "mata",
+  "text": "Mata!"
+ },
+ {
+  "lang": "id",
+  "key": "hidung",
+  "text": "Hidung!"
+ },
+ {
+  "lang": "id",
+  "key": "telinga",
+  "text": "Telinga!"
+ },
+ {
+  "lang": "id",
+  "key": "mulut",
+  "text": "Mulut!"
+ },
+ {
+  "lang": "id",
+  "key": "lidah",
+  "text": "Lidah!"
+ },
+ {
+  "lang": "id",
+  "key": "gigi",
+  "text": "Gigi!"
+ },
+ {
+  "lang": "id",
+  "key": "tangan",
+  "text": "Tangan!"
+ },
+ {
+  "lang": "id",
+  "key": "kaki",
+  "text": "Kaki!"
+ },
+ {
+  "lang": "id",
+  "key": "lengan",
+  "text": "Lengan!"
+ },
+ {
+  "lang": "id",
+  "key": "keluarga",
+  "text": "Keluarga!"
+ },
+ {
+  "lang": "id",
+  "key": "ibu",
+  "text": "Ibu!"
+ },
+ {
+  "lang": "id",
+  "key": "ayah",
+  "text": "Ayah!"
+ },
+ {
+  "lang": "id",
+  "key": "bayi",
+  "text": "Bayi!"
+ },
+ {
+  "lang": "id",
+  "key": "nenek",
+  "text": "Nenek!"
+ },
+ {
+  "lang": "id",
+  "key": "kakek",
+  "text": "Kakek!"
+ },
+ {
+  "lang": "id",
+  "key": "anak-laki-laki",
+  "text": "Anak Laki-laki!"
+ },
+ {
+  "lang": "id",
+  "key": "anak-perempuan",
+  "text": "Anak Perempuan!"
+ },
+ {
+  "lang": "id",
+  "key": "warna",
+  "text": "Warna!"
+ },
+ {
+  "lang": "id",
+  "key": "merah",
+  "text": "Merah!"
+ },
+ {
+  "lang": "id",
+  "key": "oranye",
+  "text": "Oranye!"
+ },
+ {
+  "lang": "id",
+  "key": "kuning",
+  "text": "Kuning!"
+ },
+ {
+  "lang": "id",
+  "key": "hijau",
+  "text": "Hijau!"
+ },
+ {
+  "lang": "id",
+  "key": "biru",
+  "text": "Biru!"
+ },
+ {
+  "lang": "id",
+  "key": "ungu",
+  "text": "Ungu!"
+ },
+ {
+  "lang": "id",
+  "key": "merah-muda",
+  "text": "Merah Muda!"
+ },
+ {
+  "lang": "id",
+  "key": "cokelat",
+  "text": "Cokelat!"
+ },
+ {
+  "lang": "id",
+  "key": "hitam",
+  "text": "Hitam!"
+ },
+ {
+  "lang": "id",
+  "key": "putih",
+  "text": "Putih!"
+ },
+ {
+  "lang": "id",
+  "key": "abu-abu",
+  "text": "Abu-abu!"
+ },
+ {
+  "lang": "id",
+  "key": "bentuk",
+  "text": "Bentuk!"
+ },
+ {
+  "lang": "id",
+  "key": "lingkaran",
+  "text": "Lingkaran!"
+ },
+ {
+  "lang": "id",
+  "key": "persegi",
+  "text": "Persegi!"
+ },
+ {
+  "lang": "id",
+  "key": "segitiga",
+  "text": "Segitiga!"
+ },
+ {
+  "lang": "id",
+  "key": "bintang",
+  "text": "Bintang!"
+ },
+ {
+  "lang": "id",
+  "key": "hati",
+  "text": "Hati!"
+ },
+ {
+  "lang": "id",
+  "key": "belah-ketupat",
+  "text": "Belah Ketupat!"
+ },
+ {
+  "lang": "id",
+  "key": "bulan-sabit",
+  "text": "Bulan Sabit!"
+ },
+ {
+  "lang": "id",
+  "key": "angka",
+  "text": "Angka!"
+ },
+ {
+  "lang": "id",
+  "key": "satu",
+  "text": "Satu!"
+ },
+ {
+  "lang": "id",
+  "key": "dua",
+  "text": "Dua!"
+ },
+ {
+  "lang": "id",
+  "key": "tiga",
+  "text": "Tiga!"
+ },
+ {
+  "lang": "id",
+  "key": "empat",
+  "text": "Empat!"
+ },
+ {
+  "lang": "id",
+  "key": "lima",
+  "text": "Lima!"
+ },
+ {
+  "lang": "id",
+  "key": "enam",
+  "text": "Enam!"
+ },
+ {
+  "lang": "id",
+  "key": "tujuh",
+  "text": "Tujuh!"
+ },
+ {
+  "lang": "id",
+  "key": "delapan",
+  "text": "Delapan!"
+ },
+ {
+  "lang": "id",
+  "key": "sembilan",
+  "text": "Sembilan!"
+ },
+ {
+  "lang": "id",
+  "key": "sepuluh",
+  "text": "Sepuluh!"
+ },
+ {
+  "lang": "id",
+  "key": "abc",
+  "text": "ABC!"
+ },
+ {
+  "lang": "id",
+  "key": "a",
+  "text": "a!"
+ },
+ {
+  "lang": "id",
+  "key": "b",
+  "text": "be!"
+ },
+ {
+  "lang": "id",
+  "key": "c",
+  "text": "ce!"
+ },
+ {
+  "lang": "id",
+  "key": "d",
+  "text": "de!"
+ },
+ {
+  "lang": "id",
+  "key": "e",
+  "text": "e!"
+ },
+ {
+  "lang": "id",
+  "key": "f",
+  "text": "ef!"
+ },
+ {
+  "lang": "id",
+  "key": "g",
+  "text": "ge!"
+ },
+ {
+  "lang": "id",
+  "key": "h",
+  "text": "ha!"
+ },
+ {
+  "lang": "id",
+  "key": "i",
+  "text": "i!"
+ },
+ {
+  "lang": "id",
+  "key": "j",
+  "text": "je!"
+ },
+ {
+  "lang": "id",
+  "key": "k",
+  "text": "ka!"
+ },
+ {
+  "lang": "id",
+  "key": "l",
+  "text": "el!"
+ },
+ {
+  "lang": "id",
+  "key": "m",
+  "text": "em!"
+ },
+ {
+  "lang": "id",
+  "key": "n",
+  "text": "en!"
+ },
+ {
+  "lang": "id",
+  "key": "o",
+  "text": "o!"
+ },
+ {
+  "lang": "id",
+  "key": "p",
+  "text": "pe!"
+ },
+ {
+  "lang": "id",
+  "key": "q",
+  "text": "ki!"
+ },
+ {
+  "lang": "id",
+  "key": "r",
+  "text": "er!"
+ },
+ {
+  "lang": "id",
+  "key": "s",
+  "text": "es!"
+ },
+ {
+  "lang": "id",
+  "key": "t",
+  "text": "te!"
+ },
+ {
+  "lang": "id",
+  "key": "u",
+  "text": "u!"
+ },
+ {
+  "lang": "id",
+  "key": "v",
+  "text": "fe!"
+ },
+ {
+  "lang": "id",
+  "key": "w",
+  "text": "we!"
+ },
+ {
+  "lang": "id",
+  "key": "x",
+  "text": "eks!"
+ },
+ {
+  "lang": "id",
+  "key": "y",
+  "text": "ye!"
+ },
+ {
+  "lang": "id",
+  "key": "z",
+  "text": "zet!"
+ },
+ {
+  "lang": "id",
+  "key": "alam",
+  "text": "Alam!"
+ },
+ {
+  "lang": "id",
+  "key": "matahari",
+  "text": "Matahari!"
+ },
+ {
+  "lang": "id",
+  "key": "bulan",
+  "text": "Bulan!"
+ },
+ {
+  "lang": "id",
+  "key": "awan",
+  "text": "Awan!"
+ },
+ {
+  "lang": "id",
+  "key": "hujan",
+  "text": "Hujan!"
+ },
+ {
+  "lang": "id",
+  "key": "tik-tik-tik",
+  "text": "Tik tik tik!"
+ },
+ {
+  "lang": "id",
+  "key": "pelangi",
+  "text": "Pelangi!"
+ },
+ {
+  "lang": "id",
+  "key": "petir",
+  "text": "Petir!"
+ },
+ {
+  "lang": "id",
+  "key": "duar",
+  "text": "Duar!"
+ },
+ {
+  "lang": "id",
+  "key": "salju",
+  "text": "Salju!"
+ },
+ {
+  "lang": "id",
+  "key": "pohon",
+  "text": "Pohon!"
+ },
+ {
+  "lang": "id",
+  "key": "bunga",
+  "text": "Bunga!"
+ },
+ {
+  "lang": "id",
+  "key": "daun",
+  "text": "Daun!"
+ },
+ {
+  "lang": "id",
+  "key": "gunung",
+  "text": "Gunung!"
+ },
+ {
+  "lang": "id",
+  "key": "laut",
+  "text": "Laut!"
+ },
+ {
+  "lang": "id",
+  "key": "api",
+  "text": "Api!"
+ },
+ {
+  "lang": "id",
+  "key": "balonku-ada-lima",
+  "text": "Balonku Ada Lima!"
+ },
+ {
+  "lang": "id",
+  "key": "cicak-cicak-di-dinding",
+  "text": "Cicak-cicak di Dinding!"
+ },
+ {
+  "lang": "id",
+  "key": "pelangi-pelangi",
+  "text": "Pelangi-pelangi!"
+ },
+ {
+  "lang": "id",
+  "key": "bintang-kecil",
+  "text": "Bintang Kecil!"
+ },
+ {
+  "lang": "id",
+  "key": "naik-kereta-api",
+  "text": "Naik Kereta Api!"
+ },
+ {
+  "lang": "id",
+  "key": "burung-kakak-tua",
+  "text": "Burung Kakak Tua!"
+ },
+ {
+  "lang": "id",
+  "key": "twinkle-twinkle-little-star",
+  "text": "Twinkle Twinkle Little Star!"
+ },
+ {
+  "lang": "id",
+  "key": "mary-had-a-little-lamb",
+  "text": "Mary Had a Little Lamb!"
+ },
+ {
+  "lang": "id",
+  "key": "row-row-row-your-boat",
+  "text": "Row, Row, Row Your Boat!"
+ },
+ {
+  "lang": "id",
+  "key": "old-macdonald",
+  "text": "Old MacDonald!"
+ },
+ {
+  "lang": "id",
+  "key": "ode-to-joy",
+  "text": "Ode to Joy!"
+ },
+ {
+  "lang": "id",
+  "key": "gelembung",
+  "text": "Gelembung!"
+ },
+ {
+  "lang": "id",
+  "key": "pukul-tikus",
+  "text": "Pukul Tikus!"
+ },
+ {
+  "lang": "id",
+  "key": "piano",
+  "text": "Piano!"
+ },
+ {
+  "lang": "id",
+  "key": "main-lagu",
+  "text": "Main Lagu!"
+ },
+ {
+  "lang": "id",
+  "key": "kartu-kata",
+  "text": "Kartu Kata!"
+ },
+ {
+  "lang": "id",
+  "key": "bentuk-3d",
+  "text": "Bentuk 3D!"
+ },
+ {
+  "lang": "id",
+  "key": "hebat",
+  "text": "Hebat!"
+ },
+ {
+  "lang": "id",
+  "key": "pintar-sekali",
+  "text": "Pintar sekali!"
+ },
+ {
+  "lang": "id",
+  "key": "hore-bagus",
+  "text": "Hore! Bagus!"
+ },
+ {
+  "lang": "id",
+  "key": "hore",
+  "text": "Hore!"
+ },
+ {
+  "lang": "id",
+  "key": "hore-pintar",
+  "text": "Hore! Pintar!"
+ },
+ {
+  "lang": "id",
+  "key": "hore-kamu-pintar-main-lagu",
+  "text": "Hore! Kamu pintar main lagu!"
+ },
+ {
+  "lang": "id",
+  "key": "1",
+  "text": "1!"
+ },
+ {
+  "lang": "id",
+  "key": "2",
+  "text": "2!"
+ },
+ {
+  "lang": "id",
+  "key": "3",
+  "text": "3!"
+ },
+ {
+  "lang": "id",
+  "key": "4",
+  "text": "4!"
+ },
+ {
+  "lang": "id",
+  "key": "5",
+  "text": "5!"
+ },
+ {
+  "lang": "id",
+  "key": "6",
+  "text": "6!"
+ },
+ {
+  "lang": "id",
+  "key": "7",
+  "text": "7!"
+ },
+ {
+  "lang": "id",
+  "key": "8",
+  "text": "8!"
+ },
+ {
+  "lang": "id",
+  "key": "9",
+  "text": "9!"
+ },
+ {
+  "lang": "id",
+  "key": "10",
+  "text": "10!"
+ },
+ {
+  "lang": "id",
+  "key": "11",
+  "text": "11!"
+ },
+ {
+  "lang": "id",
+  "key": "12",
+  "text": "12!"
+ },
+ {
+  "lang": "id",
+  "key": "13",
+  "text": "13!"
+ },
+ {
+  "lang": "id",
+  "key": "14",
+  "text": "14!"
+ },
+ {
+  "lang": "id",
+  "key": "15",
+  "text": "15!"
+ },
+ {
+  "lang": "id",
+  "key": "16",
+  "text": "16!"
+ },
+ {
+  "lang": "id",
+  "key": "17",
+  "text": "17!"
+ },
+ {
+  "lang": "id",
+  "key": "18",
+  "text": "18!"
+ },
+ {
+  "lang": "id",
+  "key": "19",
+  "text": "19!"
+ },
+ {
+  "lang": "id",
+  "key": "20",
+  "text": "20!"
+ },
+ {
+  "lang": "id",
+  "key": "21",
+  "text": "21!"
+ },
+ {
+  "lang": "id",
+  "key": "22",
+  "text": "22!"
+ },
+ {
+  "lang": "id",
+  "key": "23",
+  "text": "23!"
+ },
+ {
+  "lang": "id",
+  "key": "24",
+  "text": "24!"
+ },
+ {
+  "lang": "id",
+  "key": "25",
+  "text": "25!"
+ },
+ {
+  "lang": "id",
+  "key": "26",
+  "text": "26!"
+ },
+ {
+  "lang": "id",
+  "key": "27",
+  "text": "27!"
+ },
+ {
+  "lang": "id",
+  "key": "28",
+  "text": "28!"
+ },
+ {
+  "lang": "id",
+  "key": "29",
+  "text": "29!"
+ },
+ {
+  "lang": "id",
+  "key": "30",
+  "text": "30!"
+ },
+ {
+  "lang": "id",
+  "key": "31",
+  "text": "31!"
+ },
+ {
+  "lang": "id",
+  "key": "32",
+  "text": "32!"
+ },
+ {
+  "lang": "id",
+  "key": "33",
+  "text": "33!"
+ },
+ {
+  "lang": "id",
+  "key": "34",
+  "text": "34!"
+ },
+ {
+  "lang": "id",
+  "key": "35",
+  "text": "35!"
+ },
+ {
+  "lang": "id",
+  "key": "36",
+  "text": "36!"
+ },
+ {
+  "lang": "id",
+  "key": "37",
+  "text": "37!"
+ },
+ {
+  "lang": "id",
+  "key": "38",
+  "text": "38!"
+ },
+ {
+  "lang": "id",
+  "key": "39",
+  "text": "39!"
+ },
+ {
+  "lang": "id",
+  "key": "40",
+  "text": "40!"
+ },
+ {
+  "lang": "id",
+  "key": "41",
+  "text": "41!"
+ },
+ {
+  "lang": "id",
+  "key": "42",
+  "text": "42!"
+ },
+ {
+  "lang": "id",
+  "key": "43",
+  "text": "43!"
+ },
+ {
+  "lang": "id",
+  "key": "44",
+  "text": "44!"
+ },
+ {
+  "lang": "id",
+  "key": "45",
+  "text": "45!"
+ },
+ {
+  "lang": "id",
+  "key": "46",
+  "text": "46!"
+ },
+ {
+  "lang": "id",
+  "key": "47",
+  "text": "47!"
+ },
+ {
+  "lang": "id",
+  "key": "48",
+  "text": "48!"
+ },
+ {
+  "lang": "id",
+  "key": "49",
+  "text": "49!"
+ },
+ {
+  "lang": "id",
+  "key": "50",
+  "text": "50!"
+ },
+ {
+  "lang": "id",
+  "key": "51",
+  "text": "51!"
+ },
+ {
+  "lang": "id",
+  "key": "52",
+  "text": "52!"
+ },
+ {
+  "lang": "id",
+  "key": "53",
+  "text": "53!"
+ },
+ {
+  "lang": "id",
+  "key": "54",
+  "text": "54!"
+ },
+ {
+  "lang": "id",
+  "key": "55",
+  "text": "55!"
+ },
+ {
+  "lang": "id",
+  "key": "56",
+  "text": "56!"
+ },
+ {
+  "lang": "id",
+  "key": "57",
+  "text": "57!"
+ },
+ {
+  "lang": "id",
+  "key": "58",
+  "text": "58!"
+ },
+ {
+  "lang": "id",
+  "key": "59",
+  "text": "59!"
+ },
+ {
+  "lang": "id",
+  "key": "60",
+  "text": "60!"
+ },
+ {
+  "lang": "id",
+  "key": "61",
+  "text": "61!"
+ },
+ {
+  "lang": "id",
+  "key": "62",
+  "text": "62!"
+ },
+ {
+  "lang": "id",
+  "key": "63",
+  "text": "63!"
+ },
+ {
+  "lang": "id",
+  "key": "64",
+  "text": "64!"
+ },
+ {
+  "lang": "id",
+  "key": "65",
+  "text": "65!"
+ },
+ {
+  "lang": "id",
+  "key": "66",
+  "text": "66!"
+ },
+ {
+  "lang": "id",
+  "key": "67",
+  "text": "67!"
+ },
+ {
+  "lang": "id",
+  "key": "68",
+  "text": "68!"
+ },
+ {
+  "lang": "id",
+  "key": "69",
+  "text": "69!"
+ },
+ {
+  "lang": "id",
+  "key": "70",
+  "text": "70!"
+ },
+ {
+  "lang": "id",
+  "key": "71",
+  "text": "71!"
+ },
+ {
+  "lang": "id",
+  "key": "72",
+  "text": "72!"
+ },
+ {
+  "lang": "id",
+  "key": "73",
+  "text": "73!"
+ },
+ {
+  "lang": "id",
+  "key": "74",
+  "text": "74!"
+ },
+ {
+  "lang": "id",
+  "key": "75",
+  "text": "75!"
+ },
+ {
+  "lang": "id",
+  "key": "76",
+  "text": "76!"
+ },
+ {
+  "lang": "id",
+  "key": "77",
+  "text": "77!"
+ },
+ {
+  "lang": "id",
+  "key": "78",
+  "text": "78!"
+ },
+ {
+  "lang": "id",
+  "key": "79",
+  "text": "79!"
+ },
+ {
+  "lang": "id",
+  "key": "80",
+  "text": "80!"
+ },
+ {
+  "lang": "id",
+  "key": "81",
+  "text": "81!"
+ },
+ {
+  "lang": "id",
+  "key": "82",
+  "text": "82!"
+ },
+ {
+  "lang": "id",
+  "key": "83",
+  "text": "83!"
+ },
+ {
+  "lang": "id",
+  "key": "84",
+  "text": "84!"
+ },
+ {
+  "lang": "id",
+  "key": "85",
+  "text": "85!"
+ },
+ {
+  "lang": "id",
+  "key": "86",
+  "text": "86!"
+ },
+ {
+  "lang": "id",
+  "key": "87",
+  "text": "87!"
+ },
+ {
+  "lang": "id",
+  "key": "88",
+  "text": "88!"
+ },
+ {
+  "lang": "id",
+  "key": "89",
+  "text": "89!"
+ },
+ {
+  "lang": "id",
+  "key": "90",
+  "text": "90!"
+ },
+ {
+  "lang": "id",
+  "key": "91",
+  "text": "91!"
+ },
+ {
+  "lang": "id",
+  "key": "92",
+  "text": "92!"
+ },
+ {
+  "lang": "id",
+  "key": "93",
+  "text": "93!"
+ },
+ {
+  "lang": "id",
+  "key": "94",
+  "text": "94!"
+ },
+ {
+  "lang": "id",
+  "key": "95",
+  "text": "95!"
+ },
+ {
+  "lang": "id",
+  "key": "96",
+  "text": "96!"
+ },
+ {
+  "lang": "id",
+  "key": "97",
+  "text": "97!"
+ },
+ {
+  "lang": "id",
+  "key": "98",
+  "text": "98!"
+ },
+ {
+  "lang": "id",
+  "key": "99",
+  "text": "99!"
+ },
+ {
+  "lang": "id",
+  "key": "100",
+  "text": "100!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-a",
+  "text": "a!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-b",
+  "text": "be!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-c",
+  "text": "ce!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-d",
+  "text": "de!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-e",
+  "text": "e!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-f",
+  "text": "ef!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-g",
+  "text": "ge!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-h",
+  "text": "ha!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-i",
+  "text": "i!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-j",
+  "text": "je!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-k",
+  "text": "ka!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-l",
+  "text": "el!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-m",
+  "text": "em!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-n",
+  "text": "en!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-o",
+  "text": "o!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-p",
+  "text": "pe!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-q",
+  "text": "ki!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-r",
+  "text": "er!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-s",
+  "text": "es!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-t",
+  "text": "te!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-u",
+  "text": "u!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-v",
+  "text": "fe!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-w",
+  "text": "we!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-x",
+  "text": "eks!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-y",
+  "text": "ye!"
+ },
+ {
+  "lang": "id",
+  "key": "letter-z",
+  "text": "zet!"
+ }
+]

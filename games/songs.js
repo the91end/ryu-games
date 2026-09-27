@@ -1,11 +1,21 @@
 // Songs shared by the Piano and Play a Song games.
 //
-// Adding a song: write its melody with the key names below (C D E F G A B C2),
-// space-separated. The melody must fit in one octave (C to C2).
+// Adding a song: write its melody with the note names below, space-separated.
+// Middle octave: C D E F G A B C2. Below it: G0 A0 B0. Above it: D2 E2.
+// (In Indonesian "not angka": 1=C 2=D 3=E 4=F 5=G 6=A 7=B, a dot below = the
+// low notes G0 A0 B0, a dot above = C2 D2 E2.) The Piano's 8 keys play low and
+// high notes on the key with the same name; Play a Song plays them exactly.
 // `lang` puts songs of the current language first (e.g. Indonesian songs when
-// the app is in Bahasa Indonesia). The Indonesian melodies are approximate.
+// the app is in Bahasa Indonesia).
+//
+// Indonesian melodies were transcribed from published not angka (number
+// notation) for piano/pianika, e.g. the collections on not.web.id and
+// tribunnews.com.
 
 export const NOTES = [
+  { name: 'G0', freq: 196.0,  color: '#3ec1d3' },
+  { name: 'A0', freq: 220.0,  color: '#4d96ff' },
+  { name: 'B0', freq: 246.94, color: '#a66cff' },
   { name: 'C',  freq: 261.63, color: '#ff5d5d' },
   { name: 'D',  freq: 293.66, color: '#ff8c42' },
   { name: 'E',  freq: 329.63, color: '#ffd23f' },
@@ -14,6 +24,8 @@ export const NOTES = [
   { name: 'A',  freq: 440.0,  color: '#4d96ff' },
   { name: 'B',  freq: 493.88, color: '#a66cff' },
   { name: 'C2', freq: 523.25, color: '#ff5d8f' },
+  { name: 'D2', freq: 587.33, color: '#ff8c42' },
+  { name: 'E2', freq: 659.25, color: '#ffd23f' },
 ];
 
 export const SONGS = [
@@ -21,37 +33,37 @@ export const SONGS = [
     lang: 'id',
     emoji: '🎈',
     title: 'Balonku Ada Lima',
-    notes: 'G E G E G C2 B A G F D F D F B A G F E G E G E G C2 B A G F D F A G F E D C',
+    notes: 'E F G C2 G E G D E F D G F E E E A A B C2 G E F G F E D C E F G C2 G E G D E F D G F E E E A A B C2 G D D G F E D C',
   },
   {
     lang: 'id',
     emoji: '🦎',
     title: 'Cicak-cicak di Dinding',
-    notes: 'C D E C E F G G A G F E D E C E F G A G F E D E D C',
+    notes: 'G E G E E F G F D F A G F E A F A F A B C2 C2 E G F D C',
   },
   {
     lang: 'id',
     emoji: '🌈',
     title: 'Pelangi-pelangi',
-    notes: 'C E G G A G E C D F A A G F E D E G C2 C2 B A G E F A G F E D C',
+    notes: 'G0 C E E E E E D C B0 C D G F F F E D F E D C D E E G G G E F F E E E C D G0 C E E D F E E D D C',
   },
   {
     lang: 'id',
     emoji: '🌟',
     title: 'Bintang Kecil',
-    notes: 'G G E G C2 A G F F D F A G F E E D E G F E D D C D E D C',
+    notes: 'G E D C B0 D C B0 A0 G0 A0 B0 C G0 C E G E C D G E D C E G E D C A0 B0 C A0 G0 D E F D A0 B0 C',
   },
   {
     lang: 'id',
     emoji: '🚂',
     title: 'Naik Kereta Api',
-    notes: 'C E G G G E C D F A A G F E G G G E C D E F G G G F E D C',
+    notes: 'E F G A G F E C C C C D E C D B0 C C B0 A0 B0 C A0 G0 D E F F E D D G A G E F G G E C E F G C C D E C D D C B0 C',
   },
   {
     lang: 'id',
     emoji: '🦜',
     title: 'Burung Kakak Tua',
-    notes: 'G E E E F G G A G F E D E F F F G A A B A G F E D C',
+    notes: 'G G E C E D E F A G F E G G E C E D B A G F E D C E G E G G A A A A E G E G G A A A A C2 B G A B C2',
   },
   {
     lang: 'en',

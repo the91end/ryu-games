@@ -1,3 +1,5 @@
+import { playClip, slug } from './voice.js';
+
 // Tiny i18n: English + Bahasa Indonesia. Add a language by adding a key to
 // STRINGS and LANGS, then give every `name: { en, id }` in the registry a value.
 
@@ -9,14 +11,14 @@ export const LANGS = {
 const STRINGS = {
   en: {
     start: 'Start',
-    fullscreen: 'Toggle fullscreen',
+    install: 'Install app',
     language: 'Change language',
     back: 'Hold to go back to the menu',
     menu: 'Game menu',
   },
   id: {
     start: 'Mulai',
-    fullscreen: 'Layar penuh',
+    install: 'Pasang aplikasi',
     language: 'Ganti bahasa',
     back: 'Tahan untuk kembali ke menu',
     menu: 'Menu permainan',
@@ -75,11 +77,27 @@ export function applyI18n(root = document) {
   }
 }
 
-/** Speak text aloud in the current language (great for naming colors, animals…). */
+/** Speak text aloud in the current language (great for naming colors, animals…).
+ *  Uses a recorded natural voice clip when there is one, else the browser's voice. */
 export function say(text) {
+  const phrase = tr(text);
+  if (!phrase) return;
+  window.speechSynthesis?.cancel();
+  const current = lang;
+  playClip(current, slug(phrase)).then((ok) => { if (!ok && current === lang) speak(phrase); });
+}
+
+/** Say a single letter's name (A → "ay" / "a"), for spelling words out. */
+export function sayLetter(letter) {
+  const l = String(letter).toLowerCase();
+  window.speechSynthesis?.cancel();
+  playClip(lang, `letter-${slug(l)}`).then((ok) => { if (!ok) speak(l); });
+}
+
+function speak(text) {
   const synth = window.speechSynthesis;
-  if (!synth || !text) return;
-  const u = new SpeechSynthesisUtterance(tr(text));
+  if (!synth) return;
+  const u = new SpeechSynthesisUtterance(text);
   u.lang = LANGS[lang].speech;
   const voice = synth.getVoices().find((v) => v.lang.replace('_', '-').startsWith(u.lang.slice(0, 2)));
   if (voice) u.voice = voice;

@@ -1,6 +1,7 @@
 import { GAMES } from '../games/registry.js';
 import { createKit } from './kit.js';
-import { toggleFullscreen, enterFullscreen, isFullscreen, keepAwake } from './fullscreen.js';
+import { getAudio } from './audio.js';
+import { enterFullscreen, isFullscreen, keepAwake, keepFullscreen, isInstalled } from './fullscreen.js';
 import { LANGS, getLang, nextLang, onLangChange, applyI18n, tr, say } from './i18n.js';
 
 const HOLD_TO_EXIT_MS = 1200;
@@ -92,6 +93,30 @@ function lockDownGestures() {
   document.addEventListener('gesturestart', (e) => e.preventDefault());
 }
 
+// ---------- Installable app (PWA) ----------
+function setupInstall() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch((err) => console.warn('Service worker not registered', err));
+  }
+  // Chrome/Edge/Samsung Internet: show our own 📲 button when the app can be installed.
+  // (iPhone/iPad: Share → Add to Home Screen; there is no install event there.)
+  const btn = $('#install-btn');
+  let prompt = null;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    prompt = e;
+    btn.hidden = isInstalled();
+  });
+  btn.addEventListener('click', async () => {
+    if (!prompt) return;
+    prompt.prompt();
+    await prompt.userChoice;
+    prompt = null;
+    btn.hidden = true;
+  });
+  window.addEventListener('appinstalled', () => { btn.hidden = true; });
+}
+
 // ---------- Boot ----------
 function init() {
   applyI18n();
@@ -107,13 +132,14 @@ function init() {
   });
   lockDownGestures();
 
-  $('#fullscreen-btn').addEventListener('click', toggleFullscreen);
+  keepFullscreen();
+  setupInstall();
 
   // First tap: unlock audio, go fullscreen, keep screen awake
   const overlay = $('#start-overlay');
   $('#start-btn').addEventListener('click', async () => {
     overlay.classList.add('hidden');
-    createKit.unlockAudio();
+    getAudio();
     await enterFullscreen();
     keepAwake();
   });
