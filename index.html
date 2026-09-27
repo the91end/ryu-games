@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Lock zoom so little fingers can't pinch the page around -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1b1f3b">
+  <!-- iOS: allow "Add to Home Screen" to launch without browser chrome -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Ryu Games">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  <title>Ryu Games</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Menu screen -->
+  <section id="menu" class="screen active" data-i18n-aria="menu">
+    <header class="menu-header">
+      <h1>Ryu Games</h1>
+      <div class="header-actions">
+        <button id="lang-btn" class="icon-btn lang-btn" data-i18n-aria="language"></button>
+        <button id="fullscreen-btn" class="icon-btn" data-i18n-aria="fullscreen">⛶</button>
+      </div>
+    </header>
+    <div id="game-grid" class="game-grid"></div>
+  </section>
+
+  <!-- Game screen: each game renders into #game-stage -->
+  <section id="game" class="screen">
+    <div id="game-stage" class="game-stage"></div>
+    <!-- Hold-to-exit so a toddler can't leave the game by accident -->
+    <button id="back-btn" class="back-btn" data-i18n-aria="back">
+      <svg class="hold-ring" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="45"></circle>
+      </svg>
+      <span>🏠</span>
+    </button>
+  </section>
+
+  <!-- Shown the first time to get the user gesture needed for fullscreen + audio -->
+  <div id="start-overlay" class="start-overlay">
+    <button id="start-btn" class="start-btn" data-i18n-aria="start">▶</button>
+  </div>
+
+  <!-- three.js (vendored, works offline) is only loaded when a 3D game is opened -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three.module.min.js"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

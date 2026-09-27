@@ -1,0 +1,189 @@
+:root {
+  --bg: #1b1f3b;
+  --fg: #ffffff;
+  --tile-radius: 32px;
+  --gap: clamp(16px, 4vmin, 32px);
+  --emoji-font: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+/* ---- Toddler-proofing: no selection, no callouts, no zoom, no pull-to-refresh ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+}
+/* Use on anything that shows an emoji, so it never falls back to a black & white glyph */
+.emoji { font-family: var(--emoji-font); font-weight: normal; }
+
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* ---- Screens ---- */
+.screen {
+  position: fixed;
+  inset: 0;
+  display: none;
+}
+.screen.active { display: flex; }
+
+/* ---- Menu ---- */
+#menu {
+  flex-direction: column;
+  padding: calc(var(--gap) + var(--safe-top)) calc(var(--gap) + var(--safe-right))
+           calc(var(--gap) + var(--safe-bottom)) calc(var(--gap) + var(--safe-left));
+  gap: var(--gap);
+}
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-header h1 {
+  margin: 0;
+  font-size: clamp(28px, 7vmin, 56px);
+}
+.icon-btn {
+  font-family: var(--emoji-font);
+  width: 72px;
+  height: 72px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 40px;
+  line-height: 1;
+}
+
+.game-grid {
+  flex: 1;
+  display: grid;
+  /* Tiles are never smaller than ~160px: huge targets for small hands */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+  grid-auto-rows: minmax(160px, 1fr);
+  gap: var(--gap);
+  overflow-y: auto;
+  touch-action: pan-y;
+}
+.game-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--tile-radius);
+  background: var(--tile-color, #ff5d8f);
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.25);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.game-tile:active,
+.game-tile.pressed {
+  transform: translateY(8px) scale(0.97);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+.game-tile .emoji {
+  font-size: clamp(64px, 18vmin, 140px);
+  line-height: 1;
+}
+.game-tile .label {
+  font-size: clamp(20px, 5vmin, 36px);
+  font-weight: 800;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* ---- Game screen ---- */
+.game-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.back-btn {
+  position: absolute;
+  top: calc(12px + var(--safe-top));
+  left: calc(12px + var(--safe-left));
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+.back-btn span { position: relative; font-family: var(--emoji-font); }
+.hold-ring {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+}
+.hold-ring circle {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 283;          /* 2πr, r = 45 */
+  stroke-dashoffset: 283;
+}
+.back-btn.holding .hold-ring circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset var(--hold-ms, 1200ms) linear;
+}
+
+/* ---- Start overlay ---- */
+.start-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+}
+.start-overlay.hidden { display: none; }
+.start-btn {
+  width: min(60vmin, 320px);
+  height: min(60vmin, 320px);
+  border-radius: 50%;
+  background: #3ec1d3;
+  font-size: min(28vmin, 150px);
+  box-shadow: 0 14px 0 rgba(0, 0, 0, 0.25);
+  font-family: var(--emoji-font);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse {
+  50% { transform: scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .start-btn { animation: none; }
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+.lang-btn {
+  width: auto;
+  min-width: 72px;
+  padding: 0 16px;
+  font-size: 28px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

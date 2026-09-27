@@ -1,0 +1,13 @@
+{
+  "name": "Ryu Games",
+  "short_name": "Ryu Games",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#1b1f3b",
+  "theme_color": "#1b1f3b",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
