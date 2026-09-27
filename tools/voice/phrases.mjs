@@ -42,7 +42,12 @@ for (const cat of CATEGORIES) {
   addPair(cat.name);
   for (const c of cat.cards) { addPair(c.name); addPair(c.sound); }
 }
-for (const s of SONGS) addPair(s.title);
+// English songs keep their English title (and English voice) in Indonesian mode
+const englishInId = new Set();
+for (const s of SONGS) {
+  addPair(s.title);
+  if (s.lang === 'en') englishInId.add(slug(typeof s.title === 'string' ? s.title : s.title.en));
+}
 for (const g of GAMES) addPair(g.name);
 
 // Every inline { en: '…', id: '…' } in the code (cheers, color names, …)
@@ -63,7 +68,9 @@ for (const lang of ['en', 'id']) {
   const names = LETTERS[lang].split(' ').map((n) => n.replace('-', ' '));
   for (const [key, text] of phrases[lang]) {
     const letter = /^[a-z]$/.test(key) ? names[key.charCodeAt(0) - 97] : null;
-    out.push({ lang, key, text: lively(letter ?? text) });
+    const entry = { lang, key, text: lively(letter ?? text) };
+    if (lang === 'id' && englishInId.has(key)) entry.engine = 'en';
+    out.push(entry);
   }
   names.forEach((name, i) => out.push({ lang, key: `letter-${String.fromCharCode(97 + i)}`, text: lively(name) }));
 }

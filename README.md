@@ -121,18 +121,24 @@ const { THREE, scene, camera, pickAt, worldAt } = await create3D(kit);
 ## Voices
 
 Every phrase the app speaks has a clip in `voice/<lang>/`, generated offline with
-open neural text-to-speech models:
-[Kokoro](https://huggingface.co/hexgrad/Kokoro-82M) (Apache-2.0) for English and
-[Piper](https://github.com/rhasspy/piper) `id_ID-news_tts-medium` for Indonesian,
-both run via [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx).
-After adding words (new cards, songs, games), regenerate the missing clips:
+the open [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M) TTS model (Apache-2.0):
+
+- **English**: Kokoro v1.1 via [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx).
+- **Indonesian**: Kokoro has no Indonesian voice, so `tools/voice/id_g2p.py` turns
+  Indonesian text into phonemes and Kokoro reads those with a voice blended from
+  `af_heart` and `hf_alpha`. It was picked because it scored best when the clips were
+  transcribed back with Whisper.
+- **Fixing a word**: Indonesian "e" can be /e/ or /ə/. Add the word to `RESPELL` in
+  `tools/voice/id_g2p.py`, writing é for /e/ (bébék) and plain e for /ə/ (kelapa).
+  Then regenerate that language.
 
 ```sh
-pip install sherpa-onnx soundfile numpy        # and ffmpeg
-# download kokoro-multi-lang-v1_1 and vits-piper-id_ID-news_tts-medium from
-# https://github.com/k2-fsa/sherpa-onnx/releases/tag/tts-models
+pip install sherpa-onnx kokoro-onnx soundfile numpy     # and ffmpeg
+# models: kokoro-multi-lang-v1_1 from https://github.com/k2-fsa/sherpa-onnx/releases/tag/tts-models
+#         kokoro-v1.0.onnx + voices-v1.0.bin from https://github.com/thewh1teagle/kokoro-onnx/releases
 node tools/voice/phrases.mjs
-python tools/voice/generate.py --kokoro <dir> --piper-id <dir>
+python tools/voice/generate.py --kokoro <v1.1 dir> --kokoro-v1 <v1.0 dir>          # only new phrases
+python tools/voice/generate.py --kokoro <dir> --kokoro-v1 <dir> --lang id --force   # redo Indonesian
 ```
 
 ## Add a language

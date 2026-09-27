@@ -1,12 +1,18 @@
 """Generate the app's voice clips with open neural TTS models (runs offline).
 
-    pip install sherpa-onnx soundfile numpy      # plus ffmpeg on PATH
-    node tools/voice/phrases.mjs                 # collect phrases -> phrases.json
-    python tools/voice/generate.py --kokoro DIR --piper-id DIR [--en-speaker 0]
+    pip install sherpa-onnx kokoro-onnx soundfile numpy   # plus ffmpeg on PATH
+    node tools/voice/phrases.mjs                          # collect phrases -> phrases.json
+    python tools/voice/generate.py --kokoro DIR --kokoro-v1 DIR [--lang id]
 
-Models (from https://github.com/k2-fsa/sherpa-onnx/releases/tag/tts-models):
-  English:    kokoro-multi-lang-v1_1       (Kokoro, Apache-2.0)
-  Indonesian: vits-piper-id_ID-news_tts-medium  (Piper)
+Models (all Kokoro, Apache-2.0):
+  English:    kokoro-multi-lang-v1_1 (sherpa-onnx), speaker 0
+              https://github.com/k2-fsa/sherpa-onnx/releases/tag/tts-models
+  Indonesian: kokoro-v1.0.onnx + voices-v1.0.bin (kokoro-onnx)
+              https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.0
+              Kokoro has no Indonesian voice, so we give it Indonesian phonemes
+              from id_g2p.py (which fixes e vs ə etc.) and a voice blended from
+              af_heart (expressive) and hf_alpha (closer vowels/consonants).
+              This blend scored best when the clips were checked with Whisper ASR.
 
 Writes voice/<lang>/<slug>.mp3 and voice/manifest.js. Existing clips are kept
 unless --force is given, so re-running only renders new phrases.
@@ -15,6 +21,7 @@ unless --force is given, so re-running only renders new phrases.
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -30,8 +37,7 @@ TRIM = ("silenceremove=start_periods=1:start_threshold=-55dB:start_silence=0.06,
         "areverse,silenceremove=start_periods=1:start_threshold=-55dB:start_silence=0.12,areverse")
 FILTERS = {
     "en": f"{TRIM},loudnorm=I=-16:TP=-1.5",
-    # The Indonesian voice is a newsreader; raise the pitch a little so it sounds friendlier.
-    "id": f"{TRIM},rubberband=pitch=1.12:tempo=1.04,loudnorm=I=-16:TP=-1.5",
+    "id": f"{TRIM},loudnorm=I=-16:TP=-1.5",
 }
 
 
@@ -46,21 +52,39 @@ def kokoro(d, speaker, speed):
     return lambda text: tts.generate(text, sid=speaker, speed=speed)
 
 
-def piper(d, speed):
-    onnx = next(f for f in os.listdir(d) if f.endswith(".onnx"))
-    cfg = so.OfflineTtsConfig(model=so.OfflineTtsModelConfig(
-        vits=so.OfflineTtsVitsModelConfig(
-            model=f"{d}/{onnx}", tokens=f"{d}/tokens.txt", data_dir=f"{d}/espeak-ng-data",
-            noise_scale=0.8, noise_scale_w=0.9, length_scale=1.0 / speed),
-        num_threads=4))
-    tts = so.OfflineTts(cfg)
-    return lambda text: tts.generate(text, sid=0)
+class Samples:
+    def __init__(self, samples, sample_rate):
+        self.samples, self.sample_rate = samples, sample_rate
+
+
+def kokoro_indonesian(d, speed, blend=0.7):
+    from kokoro_onnx import Kokoro
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from id_g2p import to_ipa
+
+    tts = Kokoro(f"{d}/kokoro-v1.0.onnx", f"{d}/voices-v1.0.bin")
+    voices = np.load(f"{d}/voices-v1.0.bin")
+    voice = (voices["af_heart"] * blend + voices["hf_alpha"] * (1 - blend)).astype(np.float32)
+
+    def speak(text):
+        # Final glottal stops come out unclear, so a light k is used instead.
+        phonemes = to_ipa(text).replace("ʔ", "k")
+        # Single words: stretch the stressed vowel, like excited talk to a toddler
+        # ("Payuuung!"). This also made short words much clearer to Whisper.
+        if " " not in phonemes.strip("!?.,"):
+            phonemes = re.sub(r"ˈ([^aiueoəɛ]*)([aiueoəɛ])", r"\1\2ː", phonemes, count=1)
+        # Stress marks make Kokoro add a stray vowel, so drop them.
+        phonemes = phonemes.replace("ˈ", "")
+        samples, rate = tts.create(phonemes, voice=voice, speed=speed, is_phonemes=True)
+        return Samples(samples, rate)
+    return speak
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--kokoro", required=True)
-    ap.add_argument("--piper-id", required=True)
+    ap.add_argument("--kokoro-v1", required=True, help="dir with kokoro-v1.0.onnx + voices-v1.0.bin")
+    ap.add_argument("--lang", help="only render this language (en or id)")
     ap.add_argument("--en-speaker", type=int, default=0)
     ap.add_argument("--ffmpeg", default="ffmpeg")
     ap.add_argument("--force", action="store_true")
@@ -70,7 +94,7 @@ def main():
     phrases = json.load(open(os.path.join(ROOT, "tools/voice/phrases.json"), encoding="utf-8"))
     engines = {
         "en": kokoro(args.kokoro, args.en_speaker, speed=0.9),
-        "id": piper(args.piper_id, speed=0.95),
+        "id": kokoro_indonesian(args.kokoro_v1, speed=0.92),
     }
     only = set(args.only.split(",")) if args.only else None
     manifest = {"en": [], "id": []}
@@ -84,7 +108,10 @@ def main():
                 continue
             if only and key not in only:
                 continue
-            audio = engines[lang](text)
+            if args.lang and lang != args.lang:
+                continue
+            # e.g. English song titles stay English in the Indonesian set
+            audio = engines[p.get("engine", lang)](text)
             wav = os.path.join(tmp, "a.wav")
             sf.write(wav, np.asarray(audio.samples), audio.sample_rate)
             os.makedirs(os.path.dirname(out), exist_ok=True)
