@@ -62,7 +62,7 @@ games/registry.js       list of games shown on the menu
 games/_template.js      copy this to start a new game
 games/songs.js          song melodies shared by Piano and Play a Song
 games/flashcards-data.js  flash card categories and words
-sounds/                 optional real recordings for flash cards (see sounds/README.md)
+sounds/                 real recordings for flash cards (credits in sounds/CREDITS.md)
 vendor/                 three.js (MIT)
 ```
 
@@ -101,8 +101,10 @@ const { THREE, scene, camera, pickAt, worldAt } = await create3D(kit);
 
 - **Cards**: edit `games/flashcards-data.js`. Add a `sound: ['Woof!', 'Guk guk!']`
   to any card so it can "talk".
-- **Real animal sounds**: put recordings in `sounds/<category>/<card id>.mp3`
-  (e.g. `sounds/animals/dog.mp3`). If a file is missing, the sound is spoken instead.
+- **Real sounds**: 33 recordings are included for animals, sea animals, vehicles,
+  rain and thunder. Add more at `sounds/<category>/<card id>.mp3`; a card without
+  a recording speaks its sound instead. See `sounds/README.md` and
+  `sounds/CREDITS.md` (some clips are CC BY / CC BY-SA and need credit).
 - **Songs**: add to `SONGS` in `games/songs.js` using note names
   `C D E F G A B C2`. Piano and Play a Song both use this list.
 

@@ -8,6 +8,8 @@
 //   name    { en, id } — shown written and spoken aloud
 //   sound   optional { en, id } — "what does it say?"; plays
 //           sounds/<category>/<id>.mp3 if present, otherwise speaks this text
+//   audio   optional recording path to use instead, e.g. 'vehicles/siren'
+//           (lets several cards share one sound file)
 
 const card = (id, emoji, en, idn, sound) => ({ id, emoji, name: { en, id: idn }, ...(sound && { sound: { en: sound[0], id: sound[1] } }) });
 
@@ -36,13 +38,13 @@ export const CATEGORIES = [
       card('monkey', '🐵', 'Monkey', 'Monyet', ['Ooh ooh aah aah!', 'Uuk uuk aak!']),
       card('mouse', '🐭', 'Mouse', 'Tikus', ['Squeak!', 'Cit cit!']),
       card('snake', '🐍', 'Snake', 'Ular', ['Hisss!', 'Sssss!']),
-      card('elephant', '🐘', 'Elephant', 'Gajah'),
+      card('elephant', '🐘', 'Elephant', 'Gajah', ['Pawoooo!', 'Nguooook!']),
       card('rabbit', '🐰', 'Rabbit', 'Kelinci'),
-      card('bear', '🐻', 'Bear', 'Beruang'),
+      card('bear', '🐻', 'Bear', 'Beruang', ['Grrrr!', 'Grrrr!']),
       card('giraffe', '🦒', 'Giraffe', 'Jerapah'),
       card('zebra', '🦓', 'Zebra', 'Zebra'),
       card('panda', '🐼', 'Panda', 'Panda'),
-      card('crocodile', '🐊', 'Crocodile', 'Buaya'),
+      card('crocodile', '🐊', 'Crocodile', 'Buaya', ['Grrrr!', 'Grrrr!']),
       card('butterfly', '🦋', 'Butterfly', 'Kupu-kupu'),
       card('ant', '🐜', 'Ant', 'Semut'),
       card('snail', '🐌', 'Snail', 'Siput'),
@@ -52,15 +54,15 @@ export const CATEGORIES = [
     id: 'sea', emoji: '🐳', color: '#3ec1d3', name: { en: 'Sea Animals', id: 'Hewan Laut' },
     cards: [
       card('fish', '🐟', 'Fish', 'Ikan'),
-      card('whale', '🐳', 'Whale', 'Paus'),
-      card('dolphin', '🐬', 'Dolphin', 'Lumba-lumba'),
+      card('whale', '🐳', 'Whale', 'Paus', ['Ooooooo!', 'Uuuuuu!']),
+      card('dolphin', '🐬', 'Dolphin', 'Lumba-lumba', ['Eee eee!', 'Iii iii!']),
       card('shark', '🦈', 'Shark', 'Hiu'),
       card('octopus', '🐙', 'Octopus', 'Gurita'),
       card('crab', '🦀', 'Crab', 'Kepiting'),
       card('turtle', '🐢', 'Turtle', 'Kura-kura'),
-      card('shrimp', '🦐', 'Shrimp', 'Udang'),
+      card('shrimp', '🦐', 'Shrimp', 'Udang', ['Snap snap!', 'Kretek kretek!']),
       card('seal', '🦭', 'Seal', 'Anjing Laut', ['Arf arf!', 'Ork ork!']),
-      card('penguin', '🐧', 'Penguin', 'Penguin'),
+      card('penguin', '🐧', 'Penguin', 'Penguin', ['Honk honk!', 'Kwak kwak!']),
     ],
   },
   {
@@ -129,10 +131,10 @@ export const CATEGORIES = [
       card('bicycle', '🚲', 'Bicycle', 'Sepeda', ['Ring ring!', 'Kring kring!']),
       card('motorcycle', '🏍️', 'Motorcycle', 'Sepeda Motor', ['Vroom!', 'Brem brem!']),
       card('truck', '🚚', 'Truck', 'Truk'),
-      card('firetruck', '🚒', 'Fire Truck', 'Mobil Pemadam', ['Nee naw nee naw!', 'Nguing nguing!']),
-      card('police', '🚓', 'Police Car', 'Mobil Polisi', ['Nee naw nee naw!', 'Nguing nguing!']),
-      card('ambulance', '🚑', 'Ambulance', 'Ambulans', ['Nee naw nee naw!', 'Nguing nguing!']),
-      card('helicopter', '🚁', 'Helicopter', 'Helikopter'),
+      { ...card('firetruck', '🚒', 'Fire Truck', 'Mobil Pemadam', ['Nee naw nee naw!', 'Nguing nguing!']), audio: 'vehicles/siren' },
+      { ...card('police', '🚓', 'Police Car', 'Mobil Polisi', ['Nee naw nee naw!', 'Nguing nguing!']), audio: 'vehicles/siren' },
+      { ...card('ambulance', '🚑', 'Ambulance', 'Ambulans', ['Nee naw nee naw!', 'Nguing nguing!']), audio: 'vehicles/siren' },
+      card('helicopter', '🚁', 'Helicopter', 'Helikopter', ['Chop chop chop!', 'Wer wer wer!']),
       card('tractor', '🚜', 'Tractor', 'Traktor'),
       card('rocket', '🚀', 'Rocket', 'Roket', ['Whoosh!', 'Wuuush!']),
     ],

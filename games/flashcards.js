@@ -112,7 +112,7 @@ export default {
     function playSound() {
       const c = current();
       if (!c.sound) return;
-      const key = `${category.id}/${c.id}`;
+      const key = c.audio || `${category.id}/${c.id}`;
       const speak = () => kit.say(c.sound);
       if (missingAudio.has(key)) return speak();
       audio?.pause();
