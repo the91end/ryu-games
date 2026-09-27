@@ -1,12 +1,12 @@
 // Service worker: makes the app installable and playable offline.
 //
 // - The app shell is cached on install.
-// - Everything else (games, sounds, voice clips, three.js) is cached the first
+// - Everything else (games, sounds, three.js) is cached the first
 //   time it's used, then served from the cache (and refreshed in the background).
 //
 // Bump VERSION when you change the shell list so old caches are cleaned up.
 
-const VERSION = 'v2';
+const VERSION = 'v3';
 const CACHE = `ryu-games-${VERSION}`;
 
 const SHELL = [
@@ -17,10 +17,8 @@ const SHELL = [
   './js/main.js',
   './js/kit.js',
   './js/audio.js',
-  './js/voice.js',
   './js/i18n.js',
   './js/fullscreen.js',
-  './voice/manifest.js',
   './games/registry.js',
   './icons/icon.svg',
   './icons/icon-192.png',

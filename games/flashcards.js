@@ -1,11 +1,12 @@
 // Flash cards: pick a category, then flip through big picture cards.
 //   - The name is written and spoken in the selected language.
-//   - Tap the picture: hear the name (and its sound, e.g. "Woof woof!").
+//   - Tap the picture: hear the name, then its real recorded sound (if it has one).
 //   - Tap the word: it's spelled out letter by letter.
 //   - Swipe or tap the big arrows for the next card.
 // Content lives in games/flashcards-data.js; recordings in sounds/<category>/<id>.mp3.
 
 import { CATEGORIES } from './flashcards-data.js';
+import { RECORDINGS } from '../sounds/index.js';
 
 const ANNOUNCE_DELAY = 500; // ms after a card appears before its name is spoken
 const NAV_THROTTLE = 700;   // ms minimum between card changes (arrows or swipes)
@@ -16,7 +17,6 @@ const CHEERS = [
   { en: 'Yay! You did it!', id: 'Hore! Bagus!' },
 ];
 
-const missingAudio = new Set(); // remember 404s so we fall back to speech instantly
 
 export default {
   start(stage, kit) {
@@ -110,6 +110,11 @@ export default {
     const later = (fn, ms) => pending.push(kit.setTimeout(fn, ms));
 
     const current = () => category.cards[index];
+    // Real recording for a card, or null (then the card simply has no sound)
+    const recordingOf = (c) => {
+      const key = c.audio || `${category.id}/${c.id}`;
+      return RECORDINGS.has(key) ? key : null;
+    };
 
     function sayName() {
       kit.say(current().name);
@@ -120,13 +125,11 @@ export default {
 
     function playSound() {
       const c = current();
-      if (!c.sound) return;
-      const key = c.audio || `${category.id}/${c.id}`;
-      const speak = () => kit.say(c.sound);
-      if (missingAudio.has(key)) return speak();
+      const key = recordingOf(c);
+      if (!key) return;
       audio?.pause();
       audio = new Audio(`sounds/${key}.mp3`);
-      audio.play().catch(() => { missingAudio.add(key); speak(); });
+      audio.play().catch(() => {});
     }
 
     // Letter by letter, then the whole word, then a cheer: "C! A! T! Cat! Great job!"
@@ -209,7 +212,7 @@ export default {
         s.textContent = ch === ' ' ? ' ' : ch;
         wordEl.appendChild(s);
       }
-      btn('sound').hidden = !c.sound;
+      btn('sound').hidden = !recordingOf(c);
       // Give the card a moment to appear before it talks
       if (announce) later(sayName, ANNOUNCE_DELAY);
     }
@@ -250,7 +253,7 @@ export default {
       if (wordEl.contains(e.target)) return; // handled by spell()
       cancelPending();
       sayName();
-      if (current().sound) later(playSound, 900);
+      if (recordingOf(current())) later(playSound, 900);
     });
 
     showCategories();

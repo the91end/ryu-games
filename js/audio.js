@@ -1,4 +1,4 @@
-// One shared Web Audio context for synth tones and recorded voice clips.
+// One shared Web Audio context for the synth tones.
 // Browsers keep it suspended until a user gesture, so call getAudio() from a tap once.
 
 let audioCtx = null;

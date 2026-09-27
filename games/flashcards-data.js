@@ -6,12 +6,11 @@
 //   swatch  optional CSS color: draws a big colored circle instead of the emoji
 //   extra   optional small line under the picture (e.g. "⭐⭐⭐" for numbers)
 //   name    { en, id } — shown written and spoken aloud
-//   sound   optional { en, id } — "what does it say?"; plays
-//           sounds/<category>/<id>.mp3 if present, otherwise speaks this text
-//   audio   optional recording path to use instead, e.g. 'vehicles/siren'
-//           (lets several cards share one sound file)
+//   audio   optional recording path, e.g. 'vehicles/siren' (lets several cards
+//           share one file). Otherwise the card plays sounds/<category>/<id>.mp3
+//           if that recording exists (listed in sounds/index.js).
 
-const card = (id, emoji, en, idn, sound) => ({ id, emoji, name: { en, id: idn }, ...(sound && { sound: { en: sound[0], id: sound[1] } }) });
+const card = (id, emoji, en, idn) => ({ id, emoji, name: { en, id: idn } });
 
 const NUMBERS_EN = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
 const NUMBERS_ID = ['Satu', 'Dua', 'Tiga', 'Empat', 'Lima', 'Enam', 'Tujuh', 'Delapan', 'Sembilan', 'Sepuluh'];
@@ -20,31 +19,31 @@ export const CATEGORIES = [
   {
     id: 'animals', emoji: '🐶', color: '#ff8c42', name: { en: 'Animals', id: 'Hewan' },
     cards: [
-      card('dog', '🐶', 'Dog', 'Anjing', ['Woof woof!', 'Guk guk!']),
-      card('cat', '🐱', 'Cat', 'Kucing', ['Meow!', 'Meong!']),
-      card('cow', '🐮', 'Cow', 'Sapi', ['Moooo!', 'Mooo!']),
-      card('chicken', '🐔', 'Chicken', 'Ayam', ['Cluck cluck!', 'Petok petok!']),
-      card('duck', '🦆', 'Duck', 'Bebek', ['Quack quack!', 'Kwek kwek!']),
-      card('sheep', '🐑', 'Sheep', 'Domba', ['Baa!', 'Mbeek!']),
-      card('goat', '🐐', 'Goat', 'Kambing', ['Maa!', 'Mbek!']),
-      card('pig', '🐷', 'Pig', 'Babi', ['Oink oink!', 'Ngok ngok!']),
-      card('horse', '🐴', 'Horse', 'Kuda', ['Neigh!', 'Hiiieee!']),
-      card('lion', '🦁', 'Lion', 'Singa', ['Roar!', 'Auuum!']),
-      card('tiger', '🐯', 'Tiger', 'Harimau', ['Roar!', 'Auuum!']),
-      card('frog', '🐸', 'Frog', 'Katak', ['Ribbit!', 'Kung kong!']),
-      card('bird', '🐦', 'Bird', 'Burung', ['Tweet tweet!', 'Cuit cuit!']),
-      card('owl', '🦉', 'Owl', 'Burung Hantu', ['Hoo hoo!', 'Uhu uhu!']),
-      card('bee', '🐝', 'Bee', 'Lebah', ['Buzz!', 'Nguuung!']),
-      card('monkey', '🐵', 'Monkey', 'Monyet', ['Ooh ooh aah aah!', 'Uuk uuk aak!']),
-      card('mouse', '🐭', 'Mouse', 'Tikus', ['Squeak!', 'Cit cit!']),
-      card('snake', '🐍', 'Snake', 'Ular', ['Hisss!', 'Sssss!']),
-      card('elephant', '🐘', 'Elephant', 'Gajah', ['Pawoooo!', 'Nguooook!']),
+      card('dog', '🐶', 'Dog', 'Anjing'),
+      card('cat', '🐱', 'Cat', 'Kucing'),
+      card('cow', '🐮', 'Cow', 'Sapi'),
+      card('chicken', '🐔', 'Chicken', 'Ayam'),
+      card('duck', '🦆', 'Duck', 'Bebek'),
+      card('sheep', '🐑', 'Sheep', 'Domba'),
+      card('goat', '🐐', 'Goat', 'Kambing'),
+      card('pig', '🐷', 'Pig', 'Babi'),
+      card('horse', '🐴', 'Horse', 'Kuda'),
+      card('lion', '🦁', 'Lion', 'Singa'),
+      card('tiger', '🐯', 'Tiger', 'Harimau'),
+      card('frog', '🐸', 'Frog', 'Katak'),
+      card('bird', '🐦', 'Bird', 'Burung'),
+      card('owl', '🦉', 'Owl', 'Burung Hantu'),
+      card('bee', '🐝', 'Bee', 'Lebah'),
+      card('monkey', '🐵', 'Monkey', 'Monyet'),
+      card('mouse', '🐭', 'Mouse', 'Tikus'),
+      card('snake', '🐍', 'Snake', 'Ular'),
+      card('elephant', '🐘', 'Elephant', 'Gajah'),
       card('rabbit', '🐰', 'Rabbit', 'Kelinci'),
-      card('bear', '🐻', 'Bear', 'Beruang', ['Grrrr!', 'Grrrr!']),
+      card('bear', '🐻', 'Bear', 'Beruang'),
       card('giraffe', '🦒', 'Giraffe', 'Jerapah'),
       card('zebra', '🦓', 'Zebra', 'Zebra'),
       card('panda', '🐼', 'Panda', 'Panda'),
-      card('crocodile', '🐊', 'Crocodile', 'Buaya', ['Grrrr!', 'Grrrr!']),
+      card('crocodile', '🐊', 'Crocodile', 'Buaya'),
       card('butterfly', '🦋', 'Butterfly', 'Kupu-kupu'),
       card('ant', '🐜', 'Ant', 'Semut'),
       card('snail', '🐌', 'Snail', 'Siput'),
@@ -54,15 +53,15 @@ export const CATEGORIES = [
     id: 'sea', emoji: '🐳', color: '#3ec1d3', name: { en: 'Sea Animals', id: 'Hewan Laut' },
     cards: [
       card('fish', '🐟', 'Fish', 'Ikan'),
-      card('whale', '🐳', 'Whale', 'Paus', ['Ooooooo!', 'Uuuuuu!']),
-      card('dolphin', '🐬', 'Dolphin', 'Lumba-lumba', ['Eee eee!', 'Iii iii!']),
+      card('whale', '🐳', 'Whale', 'Paus'),
+      card('dolphin', '🐬', 'Dolphin', 'Lumba-lumba'),
       card('shark', '🦈', 'Shark', 'Hiu'),
       card('octopus', '🐙', 'Octopus', 'Gurita'),
       card('crab', '🦀', 'Crab', 'Kepiting'),
       card('turtle', '🐢', 'Turtle', 'Kura-kura'),
-      card('shrimp', '🦐', 'Shrimp', 'Udang', ['Snap snap!', 'Kretek kretek!']),
-      card('seal', '🦭', 'Seal', 'Anjing Laut', ['Arf arf!', 'Ork ork!']),
-      card('penguin', '🐧', 'Penguin', 'Penguin', ['Honk honk!', 'Kwak kwak!']),
+      card('shrimp', '🦐', 'Shrimp', 'Udang'),
+      card('seal', '🦭', 'Seal', 'Anjing Laut'),
+      card('penguin', '🐧', 'Penguin', 'Penguin'),
     ],
   },
   {
@@ -123,20 +122,20 @@ export const CATEGORIES = [
   {
     id: 'vehicles', emoji: '🚗', color: '#4d96ff', name: { en: 'Vehicles', id: 'Kendaraan' },
     cards: [
-      card('car', '🚗', 'Car', 'Mobil', ['Vroom vroom!', 'Brum brum!']),
-      card('bus', '🚌', 'Bus', 'Bus', ['Beep beep!', 'Tin tin!']),
-      card('train', '🚂', 'Train', 'Kereta', ['Choo choo!', 'Tut tut!']),
-      card('airplane', '✈️', 'Airplane', 'Pesawat', ['Zoooom!', 'Nguuung!']),
+      card('car', '🚗', 'Car', 'Mobil'),
+      card('bus', '🚌', 'Bus', 'Bus'),
+      card('train', '🚂', 'Train', 'Kereta'),
+      card('airplane', '✈️', 'Airplane', 'Pesawat'),
       card('boat', '⛵', 'Boat', 'Perahu'),
-      card('bicycle', '🚲', 'Bicycle', 'Sepeda', ['Ring ring!', 'Kring kring!']),
-      card('motorcycle', '🏍️', 'Motorcycle', 'Sepeda Motor', ['Vroom!', 'Brem brem!']),
+      card('bicycle', '🚲', 'Bicycle', 'Sepeda'),
+      card('motorcycle', '🏍️', 'Motorcycle', 'Sepeda Motor'),
       card('truck', '🚚', 'Truck', 'Truk'),
-      { ...card('firetruck', '🚒', 'Fire Truck', 'Mobil Pemadam', ['Nee naw nee naw!', 'Nguing nguing!']), audio: 'vehicles/siren' },
-      { ...card('police', '🚓', 'Police Car', 'Mobil Polisi', ['Nee naw nee naw!', 'Nguing nguing!']), audio: 'vehicles/siren' },
-      { ...card('ambulance', '🚑', 'Ambulance', 'Ambulans', ['Nee naw nee naw!', 'Nguing nguing!']), audio: 'vehicles/siren' },
-      card('helicopter', '🚁', 'Helicopter', 'Helikopter', ['Chop chop chop!', 'Wer wer wer!']),
+      { ...card('firetruck', '🚒', 'Fire Truck', 'Mobil Pemadam'), audio: 'vehicles/siren' },
+      { ...card('police', '🚓', 'Police Car', 'Mobil Polisi'), audio: 'vehicles/siren' },
+      { ...card('ambulance', '🚑', 'Ambulance', 'Ambulans'), audio: 'vehicles/siren' },
+      card('helicopter', '🚁', 'Helicopter', 'Helikopter'),
       card('tractor', '🚜', 'Tractor', 'Traktor'),
-      card('rocket', '🚀', 'Rocket', 'Roket', ['Whoosh!', 'Wuuush!']),
+      card('rocket', '🚀', 'Rocket', 'Roket'),
     ],
   },
   {
@@ -149,7 +148,7 @@ export const CATEGORIES = [
       card('bed', '🛏️', 'Bed', 'Kasur'),
       card('door', '🚪', 'Door', 'Pintu'),
       card('lamp', '💡', 'Lamp', 'Lampu'),
-      card('clock', '⏰', 'Clock', 'Jam', ['Tick tock!', 'Tik tok!']),
+      card('clock', '⏰', 'Clock', 'Jam'),
       card('phone', '📱', 'Phone', 'Telepon'),
       card('umbrella', '☂️', 'Umbrella', 'Payung'),
       card('key', '🔑', 'Key', 'Kunci'),
@@ -250,9 +249,9 @@ export const CATEGORIES = [
       card('moon', '🌙', 'Moon', 'Bulan'),
       card('star', '⭐', 'Star', 'Bintang'),
       card('cloud', '☁️', 'Cloud', 'Awan'),
-      card('rain', '🌧️', 'Rain', 'Hujan', ['Pitter patter!', 'Tik tik tik!']),
+      card('rain', '🌧️', 'Rain', 'Hujan'),
       card('rainbow', '🌈', 'Rainbow', 'Pelangi'),
-      card('lightning', '⚡', 'Lightning', 'Petir', ['Boom!', 'Duar!']),
+      card('lightning', '⚡', 'Lightning', 'Petir'),
       card('snow', '❄️', 'Snow', 'Salju'),
       card('tree', '🌳', 'Tree', 'Pohon'),
       card('flower', '🌸', 'Flower', 'Bunga'),

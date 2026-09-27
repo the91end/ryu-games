@@ -1,5 +1,3 @@
-import { playClip, slug } from './voice.js';
-
 // Tiny i18n: English + Bahasa Indonesia. Add a language by adding a key to
 // STRINGS and LANGS, then give every `name: { en, id }` in the registry a value.
 
@@ -77,21 +75,15 @@ export function applyI18n(root = document) {
   }
 }
 
-/** Speak text aloud in the current language (great for naming colors, animals…).
- *  Uses a recorded natural voice clip when there is one, else the browser's voice. */
+/** Speak text aloud in the current language with the phone's built-in voice. */
 export function say(text) {
   const phrase = tr(text);
-  if (!phrase) return;
-  window.speechSynthesis?.cancel();
-  const current = lang;
-  playClip(current, slug(phrase)).then((ok) => { if (!ok && current === lang) speak(phrase); });
+  if (phrase) speak(phrase);
 }
 
-/** Say a single letter's name (A → "ay" / "a"), for spelling words out. */
+/** Say a single letter (for spelling words out). */
 export function sayLetter(letter) {
-  const l = String(letter).toLowerCase();
-  window.speechSynthesis?.cancel();
-  playClip(lang, `letter-${slug(l)}`).then((ok) => { if (!ok) speak(l); });
+  speak(String(letter).toLowerCase());
 }
 
 function speak(text) {

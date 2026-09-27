@@ -5,7 +5,6 @@
 
 import { getLang, t, tr, say, sayLetter } from './i18n.js';
 import { getAudio } from './audio.js';
-import { stopClip } from './voice.js';
 
 // Happy-sounding pentatonic scale: any sequence of these notes sounds nice
 const PENTATONIC = [261.63, 293.66, 329.63, 392.0, 440.0, 523.25, 587.33, 659.25, 783.99, 880.0];
@@ -154,7 +153,6 @@ export function createKit(stage) {
         try { cleanups.pop()(); } catch (err) { console.error(err); }
       }
       window.speechSynthesis?.cancel();
-      stopClip();
       stage.innerHTML = '';
       stage.removeAttribute('style');
     },
