@@ -21,6 +21,7 @@ modules, with no build step.
 | 🫧 Bubbles / Gelembung | 2D canvas | Tap floating bubbles to pop them |
 | 🐹 Whack-a-Mole / Pukul Tikus | 2D DOM | Slow, friendly moles. Each bonk is counted aloud ("one, two…" / "satu, dua…") |
 | 🎹 Piano | 2D DOM | 8 rainbow keys. Pick a song and the next key glows so the child can play along. There are no wrong notes |
+| 🎸 Play a Song / Main Lagu | 2D canvas | A 4-lane Guitar Hero-style game for toddlers. Notes fall and your child taps the pad; the real melody plays whichever pad is hit, and notes wait at the pad, so there is no way to fail |
 | 🃏 Flash Cards / Kartu Kata | 2D DOM | 15 categories and about 200 cards. Each card shows the name written and spoken, and tapping the word spells it out. Animals and vehicles also make their sound |
 | 🎨 Colors / Warna | 2D DOM | Tap to change the color and hear its name |
 | 🧊 Shapes 3D / Bentuk 3D | 3D three.js | Tap shapes to make them jump and play a note, or tap empty space to add one |
@@ -59,6 +60,7 @@ js/i18n.js              English / Indonesian strings + text-to-speech
 js/fullscreen.js        fullscreen + wake lock
 games/registry.js       list of games shown on the menu
 games/_template.js      copy this to start a new game
+games/songs.js          song melodies shared by Piano and Play a Song
 games/flashcards-data.js  flash card categories and words
 sounds/                 optional real recordings for flash cards (see sounds/README.md)
 vendor/                 three.js (MIT)
@@ -101,8 +103,8 @@ const { THREE, scene, camera, pickAt, worldAt } = await create3D(kit);
   to any card so it can "talk".
 - **Real animal sounds**: put recordings in `sounds/<category>/<card id>.mp3`
   (e.g. `sounds/animals/dog.mp3`). If a file is missing, the sound is spoken instead.
-- **Piano songs**: add to `SONGS` in `games/piano.js` using note names
-  `C D E F G A B C2`.
+- **Songs**: add to `SONGS` in `games/songs.js` using note names
+  `C D E F G A B C2`. Piano and Play a Song both use this list.
 
 ## Add a language
 
