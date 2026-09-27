@@ -34,7 +34,18 @@ python3 -m http.server 8000
 # open http://<your-computer-ip>:8000 on the phone (same Wi-Fi)
 ```
 
-To publish it, any static host works (GitHub Pages, Netlify, etc.). Push the repo and point the host at the root.
+## Deploy (free, straight from GitHub)
+
+**GitHub Pages** (already set up in `.github/workflows/pages.yml`):
+
+1. Merge into `main`. The workflow deploys on every push to `main`.
+2. One time: open **Settings → Pages** and set **Source** to **GitHub Actions**.
+3. The site goes live at `https://the91end.github.io/ryu-games/`. Open it on the
+   phone and use *Add to Home Screen*.
+
+Other free hosts that deploy from a GitHub repo on every push:
+**Cloudflare Pages**, **Netlify** and **Vercel**. With any of them, import the repo,
+leave the build command empty, and set the output directory to `/`.
 
 ## Project layout
 
