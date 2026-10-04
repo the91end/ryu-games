@@ -1,7 +1,8 @@
 // Play a Song: a toddler-sized "Guitar Hero". Colored notes fall down 4 big
-// lanes; tap the pad when a note reaches it. Whatever lane is tapped, the
-// song's real melody note plays, so it always sounds right. A note that reaches
-// the pad waits there until it's tapped — you can't fail.
+// lanes; tap the pad when a note reaches it. Notes are played strictly in
+// order (only the lowest one can be tapped) and each plays the song's real
+// melody note. A note that reaches the pad waits there until it's tapped, so
+// you can't fail; once it's played, the next one slides straight down.
 //
 // Songs come from games/songs.js. Each song's pitches are spread over the
 // 4 lanes, low notes on the left, high notes on the right.
@@ -11,6 +12,7 @@ import { NOTES, SONGS } from './songs.js';
 const LANE_COLORS = ['#ff5d5d', '#ffd23f', '#3ec1d3', '#a66cff'];
 const TRAVEL = 2.8; // seconds for a note to fall from the top to the pad
 const BEAT = 0.75;  // seconds between notes
+const RUSH = 6;     // how fast the next note slides to the pad after a hit (higher = faster)
 const CHEER = { en: 'Yay! You played the song!', id: 'Hore! Kamu pintar main lagu!' };
 
 const freqOf = Object.fromEntries(NOTES.map((n) => [n.name, n.freq]));
@@ -102,13 +104,10 @@ export default {
       flash[lane] = 1;
       kit.vibrate(15);
 
-      // Generous hit window: anything in this lane in the bottom ~40% of the screen
-      let best = null;
-      for (const n of chart) {
-        if (n.hit || n.lane !== lane) continue;
-        const ny = noteY(n, L);
-        if (ny > L.hitY - L.H * 0.4 && (!best || ny > noteY(best, L))) best = n;
-      }
+      // Notes must be played in order: only the lowest unhit note counts,
+      // and only once it's in the bottom ~40% of the screen (generous window).
+      const next = chart.find((n) => !n.hit);
+      const best = next && next.lane === lane && noteY(next, L) > L.hitY - L.H * 0.4 ? next : null;
       if (best) {
         best.hit = true;
         kit.sound.tone(best.freq, 0.5, 'triangle', 0.35);
@@ -130,10 +129,13 @@ export default {
       }
 
       if (chart) {
-        // Advance time, but hold while the next unhit note is sitting on the pad
+        // Advance time, hold while the next note waits on the pad, and once a note
+        // is played rush the following one down (eased) instead of waiting its beat.
         const next = chart.find((n) => !n.hit);
-        t += dt;
-        if (next && t > next.time) t = next.time;
+        if (next) {
+          const gap = next.time - t;
+          t = Math.min(next.time, t + Math.max(dt, gap * Math.min(1, dt * RUSH)));
+        }
         if (!next && !finished) {
           finished = true;
           kit.say(CHEER);
