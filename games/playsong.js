@@ -45,6 +45,19 @@ export default {
       </style>
       <div class="ps-pick"></div>`;
     stage.appendChild(picker);
+
+    // Big "change song" button, shown while a song is playing
+    const switchBtn = document.createElement('button');
+    switchBtn.className = 'emoji';
+    switchBtn.textContent = '🎵';
+    switchBtn.setAttribute('aria-label', kit.tr({ en: 'Change song', id: 'Ganti lagu' }));
+    switchBtn.style.cssText = `position:absolute; z-index:4; top:calc(12px + env(safe-area-inset-top));
+      right:calc(12px + env(safe-area-inset-right)); width:80px; height:80px; border-radius:24px;
+      background:#3a3f6b; border:4px solid rgba(255,255,255,.5); font-size:44px; line-height:1;`;
+    switchBtn.hidden = true;
+    stage.appendChild(switchBtn);
+    kit.on(switchBtn, 'pointerdown', (e) => e.stopPropagation()); // don't count as a lane tap
+    kit.on(switchBtn, 'click', () => showPicker());
     const grid = picker.querySelector('.ps-pick');
 
     const songs = [...SONGS].sort((a, b) => (b.lang === kit.lang) - (a.lang === kit.lang));
@@ -64,17 +77,23 @@ export default {
     const flash = [0, 0, 0, 0];
     const particles = [];
 
+    let run = 0; // bumps on every song change, so old timers don't act on a new song
+
     function startSong(song) {
+      run++;
       chart = buildChart(song);
       t = 0;
       finished = false;
       picker.hidden = true;
+      switchBtn.hidden = false;
       kit.say(song.title);
     }
 
     function showPicker() {
+      run++;
       chart = null;
       picker.hidden = false;
+      switchBtn.hidden = true;
     }
 
     // ---------- layout ----------
@@ -141,7 +160,8 @@ export default {
           kit.say(CHEER);
           [0, 2, 4, 7].forEach((n, j) => kit.setTimeout(() => kit.sound.tone(NOTES[n].freq, 0.4, 'triangle'), j * 130));
           for (let k = 0; k < 6; k++) burst(kit.random(0, L.W), kit.random(0, L.H * 0.6), kit.pick(LANE_COLORS), 20);
-          kit.setTimeout(showPicker, 3500);
+          const thisRun = run;
+          kit.setTimeout(() => { if (run === thisRun) showPicker(); }, 3500);
         }
 
         // Falling notes
