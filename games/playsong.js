@@ -132,7 +132,7 @@ export default {
         kit.sound.tone(best.freq, 0.5, 'triangle', 0.35);
         burst((lane + 0.5) * L.laneW, Math.min(noteY(best, L), L.hitY), LANE_COLORS[lane]);
       } else {
-        kit.sound.tone(180 + lane * 40, 0.08, 'sine', 0.1); // soft "thud", never a fail sound
+        kit.sound.pop(); // a playful pop for taps that don't hit the next note (never a fail sound)
       }
     });
 

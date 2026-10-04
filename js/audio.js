@@ -8,6 +8,8 @@ export function getAudio() {
     const Ctx = window.AudioContext || window.webkitAudioContext;
     if (Ctx) audioCtx = new Ctx();
   }
-  if (audioCtx?.state === 'suspended') audioCtx.resume();
+  // 'suspended' until the first tap; iOS can also leave it 'interrupted' (e.g. after
+  // the built-in voice speaks or a call), so wake it up whenever it isn't running.
+  if (audioCtx && audioCtx.state !== 'running') audioCtx.resume().catch(() => {});
   return audioCtx;
 }
