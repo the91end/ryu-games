@@ -6,7 +6,7 @@
 //
 // Bump VERSION when you change the shell list so old caches are cleaned up.
 
-const VERSION = 'v7';
+const VERSION = 'v8';
 const CACHE = `ryu-games-${VERSION}`;
 
 const SHELL = [

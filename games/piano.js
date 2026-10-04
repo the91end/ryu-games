@@ -1,7 +1,7 @@
-// Toddler piano: a grid of 5 octaves (C2–B6, 35 big keys). Each note keeps
+// Toddler piano: a grid of 5 octaves (C2–B6, 35 big keys), read like a book:
+// the lowest note is top-left, going right through C D E F G A B, then down to
+// the next octave, ending with the highest note bottom-right. Each note keeps
 // its rainbow color, lighter going up and darker going down.
-// Landscape: rows are octaves (high at the top), columns are C D E F G A B.
-// Portrait:  columns are octaves (low on the left), rows are notes (C at the bottom).
 // Pick a song and the next key glows — tap it to play along. Any key can be
 // tapped at any time; there are no wrong notes.
 //
@@ -79,19 +79,9 @@ export default {
       return el;
     });
 
-    // Place keys so they stay big: notes along the long side, octaves along the short one
-    kit.onResize((w, h) => {
-      const portrait = h > w;
-      const cols = portrait ? OCTAVES.length : LETTERS.length;
-      const rows = portrait ? LETTERS.length : OCTAVES.length;
-      keysEl.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-      keysEl.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
-      KEYS.forEach((k, i) => {
-        const o = OCTAVES.indexOf(k.octave);
-        keyEls[i].style.gridColumn = portrait ? o + 1 : k.n + 1;
-        keyEls[i].style.gridRow = portrait ? LETTERS.length - k.n : OCTAVES.length - o;
-      });
-    });
+    // One octave per row (C..B), lowest octave at the top
+    keysEl.style.gridTemplateColumns = `repeat(${LETTERS.length}, 1fr)`;
+    keysEl.style.gridTemplateRows = `repeat(${OCTAVES.length}, 1fr)`;
 
     function highlightNext() {
       keyEls.forEach((el) => el.classList.remove('next'));
