@@ -25,7 +25,7 @@ modules, with no build step.
 |---|---|---|
 | 🫧 Bubbles / Gelembung | 2D canvas | Tap floating bubbles to pop them |
 | 🐹 Whack-a-Mole / Pukul Tikus | 2D DOM | Slow, friendly moles. Each bonk is counted aloud ("one, two…" / "satu, dua…") |
-| 🎹 Piano | 2D DOM | 8 rainbow keys. Pick a song and the next key glows so the child can play along. There are no wrong notes |
+| 🎹 Piano | 2D DOM | A grid of 5 octaves (35 rainbow keys, lighter = higher). Pick a song and the next key glows so the child can play along. There are no wrong notes |
 | 🎸 Play a Song / Main Lagu | 2D canvas | A 4-lane Guitar Hero-style game for toddlers. Notes fall and your child taps the pad; the real melody plays whichever pad is hit, and notes wait at the pad, so there is no way to fail |
 | 🃏 Flash Cards / Kartu Kata | 2D DOM | 15 categories and about 200 cards. Each card shows the name written and spoken, and tapping the word spells it out. Animals, vehicles and nature cards play real recorded sounds |
 | 🎨 Colors / Warna | 2D DOM | Tap to change the color and hear its name |

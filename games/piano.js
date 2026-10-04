@@ -1,16 +1,32 @@
-// Toddler piano: 8 big rainbow keys. Pick a song and the next key glows —
-// tap it to play along. Any key can be tapped at any time; there are no
-// wrong notes.
+// Toddler piano: a grid of 5 octaves (C2–B6, 35 big keys). Each note keeps
+// its rainbow color, lighter going up and darker going down.
+// Landscape: rows are octaves (high at the top), columns are C D E F G A B.
+// Portrait:  columns are octaves (low on the left), rows are notes (C at the bottom).
+// Pick a song and the next key glows — tap it to play along. Any key can be
+// tapped at any time; there are no wrong notes.
 //
 // Songs live in games/songs.js (shared with the Play a Song game).
 
-import { NOTES, SONGS } from './songs.js';
+import { SONGS } from './songs.js';
 
-// 8 keys: C D E F G A B C2. Songs' low/high notes (G0, D2…) use the key with the same name.
-const KEYS = NOTES.filter((n) => /^[A-G]$|^C2$/.test(n.name));
+const LETTERS = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+const SEMITONE = { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 };
+const COLORS = ['#ff5d5d', '#ff8c42', '#ffd23f', '#7bd389', '#3ec1d3', '#4d96ff', '#a66cff'];
+const OCTAVES = [2, 3, 4, 5, 6];
+
+const KEYS = [];
+for (const octave of OCTAVES) {
+  LETTERS.forEach((letter, n) => {
+    const midi = 12 * (octave + 1) + SEMITONE[letter];
+    KEYS.push({ letter, octave, n, color: COLORS[n], freq: 440 * 2 ** ((midi - 69) / 12) });
+  });
+}
+
+// Song note names (see songs.js): G0 A0 B0 = octave 3, C..B = octave 4, C2 D2 E2 = octave 5
 const keyFor = (name) => {
-  const i = KEYS.findIndex((k) => k.name === name);
-  return i >= 0 ? i : KEYS.findIndex((k) => k.name === name[0]);
+  const letter = name[0];
+  const octave = name.endsWith('0') ? 3 : name.endsWith('2') ? 5 : 4;
+  return (octave - OCTAVES[0]) * LETTERS.length + LETTERS.indexOf(letter);
 };
 
 const CHEER = { en: 'Yay! Well done!', id: 'Hore! Pintar!' };
@@ -27,14 +43,14 @@ export default {
         .song { flex:none; width:72px; height:72px; border-radius:22px; font-size:40px;
           background:rgba(255,255,255,.15); transition:transform .1s; }
         .song.active { background:#fff; transform:scale(1.08); }
-        .keys { flex:1; display:flex; gap:6px; padding:0 6px 6px; }
-        .keys.portrait { flex-direction:column-reverse; } /* low notes at the bottom */
-        .key { flex:1; border-radius:18px; background:var(--c); position:relative;
-          box-shadow:inset 0 -10px 0 rgba(0,0,0,.2); transition:transform .08s, filter .08s; }
-        .key.down { transform:scale(.96); filter:brightness(1.3); }
-        .key.next { outline:8px solid #fff; outline-offset:-8px; animation:glow .8s ease-in-out infinite; }
+        .keys { flex:1; display:grid; gap:5px; padding:0 6px 6px; min-height:0; }
+        .key { border-radius:14px; position:relative; min-width:0; min-height:0;
+          background:color-mix(in srgb, var(--c), var(--mix) var(--amt));
+          box-shadow:inset 0 -8px 0 rgba(0,0,0,.2); transition:transform .08s, filter .08s; }
+        .key.down { transform:scale(.94); filter:brightness(1.35); }
+        .key.next { outline:6px solid #fff; outline-offset:-6px; animation:glow .8s ease-in-out infinite; }
         .key.next::after { content:'⭐'; position:absolute; left:50%; top:50%;
-          transform:translate(-50%,-50%); font-size:min(12vmin, 70px); }
+          transform:translate(-50%,-50%); font-size:min(7vmin, 44px); }
         @keyframes glow { 50% { filter:brightness(1.35); } }
       </style>
       <div class="piano">
@@ -51,6 +67,10 @@ export default {
       const el = document.createElement('div');
       el.className = 'key';
       el.style.setProperty('--c', k.color);
+      // Octave 4 is the pure color; higher octaves are mixed with white, lower with black
+      const step = k.octave - 4;
+      el.style.setProperty('--mix', step >= 0 ? '#fff' : '#000');
+      el.style.setProperty('--amt', `${Math.abs(step) * (step >= 0 ? 22 : 18)}%`);
       keysEl.appendChild(el);
       kit.on(el, 'pointerdown', () => press(i));
       for (const ev of ['pointerup', 'pointerleave', 'pointercancel']) {
@@ -59,7 +79,19 @@ export default {
       return el;
     });
 
-    kit.onResize((w, h) => keysEl.classList.toggle('portrait', h > w));
+    // Place keys so they stay big: notes along the long side, octaves along the short one
+    kit.onResize((w, h) => {
+      const portrait = h > w;
+      const cols = portrait ? OCTAVES.length : LETTERS.length;
+      const rows = portrait ? LETTERS.length : OCTAVES.length;
+      keysEl.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+      keysEl.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+      KEYS.forEach((k, i) => {
+        const o = OCTAVES.indexOf(k.octave);
+        keyEls[i].style.gridColumn = portrait ? o + 1 : k.n + 1;
+        keyEls[i].style.gridRow = portrait ? LETTERS.length - k.n : OCTAVES.length - o;
+      });
+    });
 
     function highlightNext() {
       keyEls.forEach((el) => el.classList.remove('next'));
@@ -82,7 +114,10 @@ export default {
       song = null;
       highlightNext();
       kit.setTimeout(() => {
-        [0, 2, 4, 7].forEach((n, j) => kit.setTimeout(() => kit.sound.tone(KEYS[n].freq, 0.4, 'triangle'), j * 130));
+        ['C4', 'E4', 'G4', 'C5'].forEach((name, j) => {
+          const k = KEYS.find((x) => `${x.letter}${x.octave}` === name);
+          kit.setTimeout(() => kit.sound.tone(k.freq, 0.4, 'triangle'), j * 130);
+        });
         kit.setTimeout(() => kit.say(CHEER), 600);
       }, 400);
     }

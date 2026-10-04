@@ -3,8 +3,8 @@
 // Adding a song: write its melody with the note names below, space-separated.
 // Middle octave: C D E F G A B C2. Below it: G0 A0 B0. Above it: D2 E2.
 // (In Indonesian "not angka": 1=C 2=D 3=E 4=F 5=G 6=A 7=B, a dot below = the
-// low notes G0 A0 B0, a dot above = C2 D2 E2.) The Piano's 8 keys play low and
-// high notes on the key with the same name; Play a Song plays them exactly.
+// low notes G0 A0 B0, a dot above = C2 D2 E2.) Both games play them at their
+// exact pitch.
 // `lang` puts songs of the current language first (e.g. Indonesian songs when
 // the app is in Bahasa Indonesia).
 //
